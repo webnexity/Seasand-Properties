@@ -6,7 +6,6 @@ import {
   MapPin,
   CheckCircle,
   Clock,
-  Home,
   Phone,
   Mail,
   Tag,
@@ -23,47 +22,49 @@ const ShreekhetraVihar1New = () => {
 
   // Project Data
   const project = {
-    id: "shreekhtera-vihar-1",
-    name: "Shreekhtera Vihar 1",
+    id: "shreekhetra-vihar-1",
+    name: "Shreekhetra Vihar 1",
     headline: "Exclusive Residential Plots in Prime Location",
     description:
-      "Shreekhtera Vihar 1 offers exclusive residential plots with world-class amenities and exceptional connectivity in Bhubaneswar. Located in a prime area, these plots are designed for those who seek comfort, luxury, and convenience.",
+      "Shreekhetra Vihar 1 offers exclusive residential plots with world-class amenities and exceptional connectivity in Bhubaneswar. Located in a prime area, these plots are designed for those who seek comfort, luxury, and convenience.",
     fullDescription: [
-      "Shreekhtera Vihar 1 is a premium residential plotting project that represents the epitome of luxury living in Bhubaneswar. Set in one of the city's most sought-after locations, this project brings together strategic positioning with world-class amenities to create an unparalleled living experience.",
-      "Each plot in Shreekhtera Vihar 1 is carefully designed to optimize space and ensure privacy while providing ample room for creativity in home design. The project features expansive internal roads, beautifully landscaped green spaces, and cutting-edge infrastructure that enhances your lifestyle.",
+      "Shreekhetra Vihar 1 is a premium residential plotting project that represents the epitome of luxury living in Bhubaneswar. Set in one of the city's most sought-after locations, this project brings together strategic positioning with world-class amenities to create an unparalleled living experience.",
+      "Each plot in Shreekhetra Vihar 1 is carefully designed to optimize space and ensure privacy while providing ample room for creativity in home design. The project features expansive internal roads, beautifully landscaped green spaces, and cutting-edge infrastructure that enhances your lifestyle.",
       "With easy access to major educational institutions, healthcare facilities, shopping centers, and entertainment hubs, Shreekhtera Vihar 1 offers the perfect blend of urban connectivity and peaceful residential living.",
     ],
-    location: "Bhubaneswar, Odisha",
+    location: "Bhubaneswar-puri NH",
     locationDetails:
-      "Strategically located in Bhubaneswar, just 3 km from Infocity, 4 km from Chandrasekharpur, and 8 km from city center with excellent connectivity to NH-16.",
-    status: "Ready to Move",
-    price: "Starting from ₹18 lakhs",
+      "Strategically located in Bhubaneswar-puri NH, just 200 meters from NH, 27 km from Bhubaneswar, and 2km from satasankha market",
+    status: "Ready to start",
+    price: "Very competative price",
     availability: "Few Plots Left",
-    totalUnits: "36 Plots",
-    availableUnits: "8 Plots",
+    totalUnits: "64 Plots",
+    
     possessionDate: "Ready to Move",
-    plotSizes: ["1500 sq.ft", "1800 sq.ft", "2100 sq.ft", "2700 sq.ft"],
+    plotSizes: ["1200 sq.ft", "1500 sq.ft", "2000 sq.ft", "4000 sq.ft"],
     amenities: [
-      "24/7 Security with CCTV",
-      "Landscaped Gardens",
-      "Children's Play Area",
-      "Wide Internal Roads",
-      "Underground Electrical Wiring",
-      "Solar Street Lights",
-      "Water Supply System",
-      "Luxurious Clubhouse",
-      "Swimming Pool",
-      "Jogging Track",
-      "Indoor Games",
+      "Home-Stead Land",
+      "30ft. Developed Road",
+      "Master Boundary Wall",
+      "Security Facility",
+      "Electrical facility",
+      "Temple",
+      "Park",
+      "Gated Community",
+      "Open space",
+      "Plantation",
+      
     ],
     contactPhone: "+91 98765 43210",
     contactEmail: "info@seasandproperties.com",
-    contactAddress: "Plot No. 12, Patia, Bhubaneswar, Odisha - 751024",
+    contactAddress: "Plot No. 420/3923, Lewis Road , Old Town , Bhubaneswar, Odisha - 751002",
     images: [
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80",
-      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "/Shreeketravihar-1-3.jpeg",
+      "/Shreeketravihar-1-4.jpeg",
+      "/Shreeketravihar-1-5.jpeg",
+      "/Shreeketravihar-1-6.jpeg",
+      "/Shreeketravihar-1-map1.jpeg",
+      "/Shreeketravihar-1-map2.jpeg",
     ],
     locationMap:
       "https://maps.googleapis.com/maps/api/staticmap?center=Bhubaneswar,Odisha&zoom=14&size=600x300&key=YOUR_API_KEY",
@@ -71,34 +72,38 @@ const ShreekhetraVihar1New = () => {
 
   // Similar projects data
   const similarProjects = [
+
     {
-      id: "ShreekhetraVihar1",
-      name: "Shreekhetra Vihar 1",
+      id: "shreekhetra-vihar-2",
+      name: "Shreekhetra Vihar Phase 2",
       headline: "Premium Residential Plots",
-      location: "Bhubaneswar, Odisha",
-      status: "Under Construction",
+      location: "Nirmala, Mangalapur , Bhubaneswar-Puri NH",
+      status: "On Going",
       images: [
-        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "/Shreeketravihar-2-4.jpeg",
+
       ],
     },
     {
-      id: "shreekhtera-vihar-2",
-      name: "Shreekhtera Vihar 2",
-      headline: "Premium Residential Plots",
-      location: "Bhubaneswar, Odisha",
-      status: "Under Construction",
-      images: [
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80",
-      ],
-    },
-    {
-      id: "shreekhtera-vihar-3",
-      name: "Shreekhtera Vihar 3",
+      id: "shreekhetra-vihar-3",
+      name: "Shreekhetra Vihar Phase 3",
       headline: "Luxury Residential Plots",
-      location: "Bhubaneswar, Odisha",
-      status: "Coming Soon",
+      location: "Pipili Square , Puri",
+      status: "On Going",
       images: [
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+
+        "/Shreekhetravihar-3-3.jpeg",
+      ],
+    },
+        {
+      id: "shreekhetra-vihar-4",
+      name: "Shreekhetra Vihar Phase 4",
+      headline: "Premium Residential Plots",
+      location: "Toshali Square , Puri",
+      status: "On Going",
+      images: [
+        "/Shreeketravihar-2-4.jpeg",
+
       ],
     },
   ];
@@ -204,18 +209,140 @@ const ShreekhetraVihar1New = () => {
                   About {project.name}
                   <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600"></div>
                 </h2>
-                <p className="text-gray-700 leading-relaxed font-exo mb-6">
-                  {project.description}
+                <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-xl shadow-sm mb-6 border-l-4 border-blue-500">
+                  <p className="text-gray-700 leading-relaxed font-exo text-lg">
+                    <span className="font-semibold text-blue-800">
+                      Shreekhetra Vihar
+                    </span>{" "}
+                    is a prestigious ready-to-move mega plotting project
+                    spanning across{" "}
+                    <span className="font-semibold">6 acres</span> of prime land
+                    at Mangalpur, Bhubaneswar. This thoughtfully designed
+                    gated community offers a perfect blend of modern amenities
+                    and natural surroundings, creating an ideal environment for
+                    your dream home. The property enjoys excellent connectivity
+                    via the proposed{" "}
+                    <span className="font-semibold">
+                      30ft Revenue Black Top Road
+                    </span>
+                    , ensuring convenient access to all essential destinations.
+                  </p>
+                </div>
+
+                <div className="bg-blue-50 rounded-xl p-6 shadow-lg mb-6 border border-blue-100">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4 font-exo border-b pb-2 border-blue-200">
+                    Strategic Location Advantages
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-3 border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200">
+                      <div className="bg-blue-100 p-2 rounded-full">
+                        <MapPin className="w-6 h-6 text-blue-600" />
+                      </div>
+                      <div>
+                        <p className="text-gray-500 text-sm font-exo">
+                          Distance from NH
+                        </p>
+                        <p className="text-gray-800 font-bold font-exo text-lg">
+                          200 MTR
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-3 border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200">
+                      <div className="bg-blue-100 p-2 rounded-full">
+                        <MapPin className="w-6 h-6 text-blue-600" />
+                      </div>
+                      <div>
+                        <p className="text-gray-500 text-sm font-exo">
+                          Distance from Bhubaneswar
+                        </p>
+                        <p className="text-gray-800 font-bold font-exo text-lg">
+                          27 KM
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-3 border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200">
+                      <div className="bg-blue-100 p-2 rounded-full">
+                        <MapPin className="w-6 h-6 text-blue-600" />
+                      </div>
+                      <div>
+                        <p className="text-gray-500 text-sm font-exo">
+                          Mangalpur Market & Medical
+                        </p>
+                        <p className="text-gray-800 font-bold font-exo text-lg">
+                          20 M
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-3 border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200">
+                      <div className="bg-blue-100 p-2 rounded-full">
+                        <MapPin className="w-6 h-6 text-blue-600" />
+                      </div>
+                      <div>
+                        <p className="text-gray-500 text-sm font-exo">
+                          Puri Bus Stand
+                        </p>
+                        <p className="text-gray-800 font-bold font-exo text-lg">
+                          25 KM
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-3 border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200 md:col-span-2">
+                      <div className="bg-blue-100 p-2 rounded-full">
+                        <MapPin className="w-6 h-6 text-blue-600" />
+                      </div>
+                      <div>
+                        <p className="text-gray-500 text-sm font-exo">
+                          Jagannath Temple
+                        </p>
+                        <p className="text-gray-800 font-bold font-exo text-lg">
+                          28 KM
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl shadow-sm mb-6 border border-green-100 flex items-center space-x-4">
+                  <div className="bg-white p-3 rounded-full shadow-md">
+                    <Users className="w-8 h-8 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-800 font-exo">
+                      Our Legacy of Trust
+                    </h4>
+                    <p className="text-gray-700 font-exo">
+                      With{" "}
+                      <span className="font-bold text-green-700">
+                        10+ years
+                      </span>{" "}
+                      of experience in developing premium residential land
+                      projects across Bhubaneswar, we've earned the trust of{" "}
+                      <span className="font-bold text-green-700">
+                        1000+ satisfied clients
+                      </span>{" "}
+                      throughout Odisha.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-gray-700 leading-relaxed font-exo mb-4">
+                  Each plot in Shreekhetra Vihar 1 is carefully designed to
+                  optimize space and ensure privacy while providing ample room
+                  for creativity in home design. The project features expansive
+                  internal roads, beautifully landscaped green spaces, and
+                  cutting-edge infrastructure that enhances your lifestyle.
                 </p>
 
-                {project.fullDescription.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-gray-700 leading-relaxed font-exo mb-4"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                <p className="text-gray-700 leading-relaxed font-exo mb-4">
+                  With easy access to major educational institutions, healthcare
+                  facilities, shopping centers, and entertainment hubs,
+                  Shreekhetra Vihar 1 offers the perfect blend of urban
+                  connectivity and peaceful residential living.
+                </p>
               </motion.div>
 
               {/* Plot Sizes */}
@@ -235,7 +362,7 @@ const ShreekhetraVihar1New = () => {
                       key={index}
                       className="bg-blue-50 border border-blue-100 rounded-lg p-4 text-center hover:bg-blue-100 transition-colors duration-300"
                     >
-                      <Home className="w-8 h-8 mx-auto mb-2 text-blue-600" />
+                      {/* <Home className="w-8 h-8 mx-auto mb-2 text-blue-600" /> */}
                       <span className="font-semibold text-gray-800 font-exo">
                         {size}
                       </span>
@@ -372,14 +499,7 @@ const ShreekhetraVihar1New = () => {
                       {project.totalUnits}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
-                    <span className="text-gray-700 font-exo">
-                      Available Units
-                    </span>
-                    <span className="text-gray-900 font-semibold font-exo">
-                      {project.availableUnits}
-                    </span>
-                  </div>
+                 
                   <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
                     <span className="text-gray-700 font-exo">
                       Project Status

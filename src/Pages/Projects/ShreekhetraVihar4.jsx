@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 
 const ShreekhetraVihar4 = () => {
-  // const { id } = useParams();
   const [activeImage, setActiveImage] = useState(0);
 
   // Scroll to top on component mount
@@ -24,45 +23,56 @@ const ShreekhetraVihar4 = () => {
 
   // Project Data
   const project = {
-    id: "shreekhetra-vihar-4",
-    name: "Shreekhetra Vihar 4",
-    headline: "Premium Residential Plots in Bhubaneswar",
+    id: "shreekhtera-vihar-4",
+    name: "Shreekhtera Vihar 4",
+    headline: "Elite Residential Plots with Ultra-modern Amenities",
     description:
-      "Shreekhetra Vihar 4 offers premium residential plots with modern amenities and excellent connectivity in Bhubaneswar. Situated in a strategic location, these plots provide the perfect balance of comfort, convenience, and lifestyle.",
+      "Shreekhtera Vihar 4 offers elite residential plots with ultra-modern amenities and superior connectivity in Bhubaneswar. Located in an upcoming luxury residential area, these plots provide the ultimate foundation for building your dream home.",
     fullDescription: [
-      "Shreekhetra Vihar 4 is an exclusive residential plotting project designed to provide you with the perfect foundation for your dream home. Located in one of Bhubaneswar's fastest-growing areas, this project combines strategic location with modern amenities to offer an exceptional living experience.",
-      "Each plot at Shreekhetra Vihar 4 is meticulously planned to maximize space utilization while ensuring privacy and comfort. The project features wide internal roads, lush green spaces, and modern infrastructure to enhance your quality of life.",
-      "With proximity to major educational institutions, healthcare facilities, and commercial centers, Shreekhetra Vihar 4 offers the convenience of urban living while maintaining a peaceful residential environment.",
+      "Shreekhtera Vihar 4 is our most innovative residential plotting project designed for those who aspire to live in a smart community with cutting-edge amenities. Set in one of Bhubaneswar's most promising localities, this project combines modern living with sustainable design principles.",
+      "Each plot in Shreekhtera Vihar 4 is meticulously planned to ensure optimal space utilization with smart home capabilities integrated into the infrastructure. The project features wide roads, extensive green spaces, and next-generation amenities to elevate your lifestyle to new heights.",
+      "With excellent connectivity to emerging business districts, educational institutions, healthcare facilities, and entertainment centers, Shreekhtera Vihar 4 offers an unmatched opportunity to invest in the future of urban living.",
     ],
     location: "Bhubaneswar, Odisha",
     locationDetails:
-      "Located in Bhubaneswar's prime area, just 2 km from KIIT University, 5 km from Patia, and 7 km from Nandankanan Zoological Park with excellent connectivity to NH-5.",
-    status: "Under Construction",
-    price: "Starting from ₹12 lakhs",
-    availability: "Limited Plots Available",
-    totalUnits: "42 Plots",
-    availableUnits: "18 Plots",
-    possessionDate: "December 2024",
-    plotSizes: ["1200 sq.ft", "1500 sq.ft", "1800 sq.ft", "2400 sq.ft"],
+      "Strategic location in emerging Bhubaneswar suburb, 5 km from New Airport Road, 8 km from Hi-Tech Hospital, and 12 km from city center with upcoming metro connectivity.",
+    status: "Pre-Launch",
+    price: "Starting from ₹25 lakhs",
+    availability: "Early Bird Booking",
+    totalUnits: "25 Premium Plots",
+    availableUnits: "25 Plots",
+    possessionDate: "December 2026",
+    plotSizes: ["2100 sq.ft", "2400 sq.ft", "2700 sq.ft", "3200 sq.ft"],
     amenities: [
-      "24/7 Security",
-      "Landscaped Gardens",
-      "Children's Play Area",
-      "Wide Internal Roads",
-      "Underground Electrical Wiring",
-      "Street Lights",
-      "Water Supply System",
-      "Clubhouse",
-      "Jogging Track",
+      "24/7 Smart Security System",
+      "Integrated Smart Home Infrastructure",
+      "Landscaped Parks with Water Features",
+      "Children's Play Area with Modern Equipment",
+      "45-feet Wide Internal Roads",
+      "Underground Utilities",
+      "Solar-powered Street Lights",
+      "Rainwater Harvesting System",
+      "Luxury Clubhouse",
+      "Infinity Swimming Pool",
+      "State-of-the-art Fitness Center",
+      "Indoor Games Zone",
+      "Multi-purpose Community Hall",
+      "Meditation and Yoga Garden",
+      "Walking and Jogging Track",
     ],
     contactPhone: "+91 98765 43210",
     contactEmail: "info@seasandproperties.com",
     contactAddress: "Plot No. 12, Patia, Bhubaneswar, Odisha - 751024",
     images: [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80",
-      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80",
+        
+      "/Shreekhetravihar-4-9.jpeg",
+      "/Shreekhetravihar-4-7.jpeg",
+      "/Shreekhetravihar-4-10.jpeg",
+      "/Shreekhetravihar-4-6.jpeg",
+      "/Shreekhetravihar-4-8.jpeg",
+      "/Shreekhetravihar-4-4.jpeg",
+      "/Shreekhetravihar-4-map1.jpeg",
+       "/Shreekhetravihar-4-map2.jpeg",
     ],
     locationMap:
       "https://maps.googleapis.com/maps/api/staticmap?center=Bhubaneswar,Odisha&zoom=14&size=600x300&key=YOUR_API_KEY",
@@ -71,19 +81,19 @@ const ShreekhetraVihar4 = () => {
   // Similar projects data
   const similarProjects = [
     {
-      id: "shreekhtera-vihar-1",
-      name: "Shreekhtera Vihar 1",
-      headline: "Exclusive Residential Plots",
+      id: "sai-vihar",
+      name: "Sai Vihar",
+      headline: "Premium Residential Plots",
       location: "Bhubaneswar, Odisha",
-      status: "Ready to Move",
+      status: "Under Construction",
       images: [
-        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
       ],
     },
     {
       id: "shreekhtera-vihar-2",
       name: "Shreekhtera Vihar 2",
-      headline: "Premium Residential Plots",
+      headline: "Modern Residential Plots",
       location: "Bhubaneswar, Odisha",
       status: "Under Construction",
       images: [
@@ -458,3 +468,4 @@ const ShreekhetraVihar4 = () => {
 };
 
 export default ShreekhetraVihar4;
+

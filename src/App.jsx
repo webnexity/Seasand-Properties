@@ -4,7 +4,7 @@ import Projects from "./Pages/Projects";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 
-import ShreekhetraVihar1 from "./Pages/Projects/ShreekhetraVihar1New";
+import ShreekhetraVihar1 from "./Pages/Projects/ShreekhetraVihar1";
 import ShreekhetraVihar2 from "./Pages/Projects/ShreekhetraVihar2";
 import ShreekhetraVihar3 from "./Pages/Projects/ShreekhetraVihar3";
 import ShreekhetraVihar4 from "./Pages/Projects/ShreekhetraVihar4";
@@ -18,7 +18,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/projects/ShreekhetraVihar4" element={<ShreekhetraVihar4 />} />
+        <Route
+          path="/projects/shreekhetra-vihar-4"
+          element={<ShreekhetraVihar4 />}
+        />
         <Route
           path="/projects/shreekhetra-vihar-1"
           element={<ShreekhetraVihar1 />}

@@ -19,8 +19,8 @@ const upcomingProjects = [
     name: "Shreekhetra Vihar - 1",
     slug: "shreekhetra-vihar-1",
     image:
-      "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    location: "Puri-Konark Marine Drive",
+      "/Shreeketravihar-1-6.jpeg",
+    location: "Bhubaneswar-Puri NH",
     description:
       "Experience luxury living with a sea view. Premium plots for your dream home.",
     keyDistances: ["5kms from Konark Temple", "10kms from Puri Beach"],
@@ -35,7 +35,7 @@ const upcomingProjects = [
     name: "Shreekhetra Vihar - 2",
     slug: "shreekhetra-vihar-2",
     image:
-      "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "/Shreeketravihar-2-9.jpeg",
     location: "Near Puri",
     description:
       "A serene and peaceful environment, perfect for building a family home away from the city hustle.",
@@ -54,7 +54,7 @@ const upcomingProjects = [
     name: "Shreekhetra Vihar - 3",
     slug: "shreekhetra-vihar-3",
     image:
-      "https://images.pexels.com/photos/313961/pexels-photo-313961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "/Shreekhetravihar-3-6.jpeg",
     location: "Sakhigopal, Puri",
     description:
       "Invest in the future with these strategically located plots with high appreciation potential.",
@@ -70,7 +70,7 @@ const upcomingProjects = [
     name: "Shreekhetra Vihar 4",
     slug: "shreekhetra-vihar-4",
     image:
-      "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "/Shreekhetravihar-4-6.jpeg",
     location: "Bhubaneswar",
     description:
       "A golden opportunity to make your dream come true at an affordable budget with maximum facility.",
