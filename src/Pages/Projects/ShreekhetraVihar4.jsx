@@ -13,7 +13,7 @@ import {
   Users,
 } from "lucide-react";
 
-const SaiVihar = () => {
+const ShreekhetraVihar4 = () => {
   // const { id } = useParams();
   const [activeImage, setActiveImage] = useState(0);
 
@@ -24,15 +24,15 @@ const SaiVihar = () => {
 
   // Project Data
   const project = {
-    id: "sai-vihar",
-    name: "Sai Vihar",
+    id: "shreekhetra-vihar-4",
+    name: "Shreekhetra Vihar 4",
     headline: "Premium Residential Plots in Bhubaneswar",
     description:
-      "Sai Vihar offers premium residential plots with modern amenities and excellent connectivity in Bhubaneswar. Situated in a strategic location, these plots provide the perfect balance of comfort, convenience, and lifestyle.",
+      "Shreekhetra Vihar 4 offers premium residential plots with modern amenities and excellent connectivity in Bhubaneswar. Situated in a strategic location, these plots provide the perfect balance of comfort, convenience, and lifestyle.",
     fullDescription: [
-      "Sai Vihar is an exclusive residential plotting project designed to provide you with the perfect foundation for your dream home. Located in one of Bhubaneswar's fastest-growing areas, this project combines strategic location with modern amenities to offer an exceptional living experience.",
-      "Each plot at Sai Vihar is meticulously planned to maximize space utilization while ensuring privacy and comfort. The project features wide internal roads, lush green spaces, and modern infrastructure to enhance your quality of life.",
-      "With proximity to major educational institutions, healthcare facilities, and commercial centers, Sai Vihar offers the convenience of urban living while maintaining a peaceful residential environment.",
+      "Shreekhetra Vihar 4 is an exclusive residential plotting project designed to provide you with the perfect foundation for your dream home. Located in one of Bhubaneswar's fastest-growing areas, this project combines strategic location with modern amenities to offer an exceptional living experience.",
+      "Each plot at Shreekhetra Vihar 4 is meticulously planned to maximize space utilization while ensuring privacy and comfort. The project features wide internal roads, lush green spaces, and modern infrastructure to enhance your quality of life.",
+      "With proximity to major educational institutions, healthcare facilities, and commercial centers, Shreekhetra Vihar 4 offers the convenience of urban living while maintaining a peaceful residential environment.",
     ],
     location: "Bhubaneswar, Odisha",
     locationDetails:
@@ -457,4 +457,4 @@ const SaiVihar = () => {
   );
 };
 
-export default SaiVihar;
+export default ShreekhetraVihar4;

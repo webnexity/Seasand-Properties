@@ -161,7 +161,7 @@ const About = () => {
                 “Seasand Properties” is a certified company with over 10 years
                 of experience, backed by a team of registered architects and
                 seasoned real-estate professionals. Our dream is to create homes
-                for millions, and our maiden project, “THE SAI VIHAR,” was a
+                for millions, and our maiden project, “THE Shreekhetra Vihar 4,” was a
                 humble beginning towards that vision.
               </p>
               <p className="text-gray-700 font-exo">

@@ -72,8 +72,8 @@ const ShreekhetraVihar1New = () => {
   // Similar projects data
   const similarProjects = [
     {
-      id: "sai-vihar",
-      name: "Sai Vihar",
+      id: "ShreekhetraVihar1",
+      name: "Shreekhetra Vihar 1",
       headline: "Premium Residential Plots",
       location: "Bhubaneswar, Odisha",
       status: "Under Construction",

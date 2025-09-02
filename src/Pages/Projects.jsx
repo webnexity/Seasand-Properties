@@ -16,26 +16,6 @@ import {
 
 const upcomingProjects = [
   {
-    name: "Sai Vihar",
-    slug: "sai-vihar",
-    image:
-      "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    location: "Bhubaneswar",
-    description:
-      "A golden opportunity to make your dream come true at an affordable budget with maximum facility.",
-    keyDistances: [
-      "14kms from Kalpana Square, Bhubaneswar",
-      "Close to major hospitals and schools",
-    ],
-    amenities: [
-      "Gated community",
-      "30 feet wide roads",
-      "Electric poles",
-      "Boundary walls",
-      "Prime location",
-    ],
-  },
-  {
     name: "Shreekhetra Vihar - 1",
     slug: "shreekhetra-vihar-1",
     image:
@@ -84,6 +64,26 @@ const upcomingProjects = [
       "Easy accessibility",
       "Street lights",
       "Plantation",
+    ],
+  },
+  {
+    name: "Shreekhetra Vihar 4",
+    slug: "shreekhetra-vihar-4",
+    image:
+      "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    location: "Bhubaneswar",
+    description:
+      "A golden opportunity to make your dream come true at an affordable budget with maximum facility.",
+    keyDistances: [
+      "14kms from Kalpana Square, Bhubaneswar",
+      "Close to major hospitals and schools",
+    ],
+    amenities: [
+      "Gated community",
+      "30 feet wide roads",
+      "Electric poles",
+      "Boundary walls",
+      "Prime location",
     ],
   },
 ];
