@@ -39,7 +39,7 @@ const ShreekhetraVihar1New = () => {
     price: "Very competative price",
     availability: "Few Plots Left",
     totalUnits: "64 Plots",
-    
+
     possessionDate: "Ready to Move",
     plotSizes: ["1200 sq.ft", "1500 sq.ft", "2000 sq.ft", "4000 sq.ft"],
     amenities: [
@@ -53,11 +53,11 @@ const ShreekhetraVihar1New = () => {
       "Gated Community",
       "Open space",
       "Plantation",
-      
     ],
     contactPhone: "+91 98765 43210",
     contactEmail: "info@seasandproperties.com",
-    contactAddress: "Plot No. 420/3923, Lewis Road , Old Town , Bhubaneswar, Odisha - 751002",
+    contactAddress:
+      "Plot No. 420/3923, Lewis Road , Old Town , Bhubaneswar, Odisha - 751002",
     images: [
       "/Shreeketravihar-1-3.jpeg",
       "/Shreeketravihar-1-4.jpeg",
@@ -72,17 +72,13 @@ const ShreekhetraVihar1New = () => {
 
   // Similar projects data
   const similarProjects = [
-
     {
       id: "shreekhetra-vihar-2",
       name: "Shreekhetra Vihar Phase 2",
       headline: "Premium Residential Plots",
       location: "Nirmala, Mangalapur , Bhubaneswar-Puri NH",
       status: "On Going",
-      images: [
-        "/Shreeketravihar-2-4.jpeg",
-
-      ],
+      images: ["/Shreeketravihar-2-4.jpeg"],
     },
     {
       id: "shreekhetra-vihar-3",
@@ -90,21 +86,15 @@ const ShreekhetraVihar1New = () => {
       headline: "Luxury Residential Plots",
       location: "Pipili Square , Puri",
       status: "On Going",
-      images: [
-
-        "/Shreekhetravihar-3-3.jpeg",
-      ],
+      images: ["/Shreekhetravihar-3-3.jpeg"],
     },
-        {
+    {
       id: "shreekhetra-vihar-4",
       name: "Shreekhetra Vihar Phase 4",
       headline: "Premium Residential Plots",
       location: "Toshali Square , Puri",
       status: "On Going",
-      images: [
-        "/Shreeketravihar-2-4.jpeg",
-
-      ],
+      images: ["/Shreeketravihar-2-4.jpeg"],
     },
   ];
 
@@ -159,10 +149,10 @@ const ShreekhetraVihar1New = () => {
       </div>
 
       <main className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-12 gap-12">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-row-12 gap-12">
             {/* Main Content */}
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-8 mx-auto lg:mx-0">
               {/* Gallery */}
               <motion.div
                 className="mb-12"
@@ -196,6 +186,17 @@ const ShreekhetraVihar1New = () => {
                     </div>
                   ))}
                 </div>
+                <div className="flex justify-center mt-6">
+                  <button
+                    onClick={() =>
+                      window.open(`${project.locationMap}`, "_blank")
+                    }
+                    className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg flex items-center transition duration-300 font-exo shadow-md"
+                  >
+                    <MapPin className="w-5 h-5 mr-2" />
+                   View Map 
+                  </button>
+                </div>
               </motion.div>
 
               {/* About Section */}
@@ -205,9 +206,9 @@ const ShreekhetraVihar1New = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative inline-block">
+                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   About {project.name}
-                  <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
                 </h2>
                 <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-xl shadow-sm mb-6 border-l-4 border-blue-500">
                   <p className="text-gray-700 leading-relaxed font-exo text-lg">
@@ -217,11 +218,11 @@ const ShreekhetraVihar1New = () => {
                     is a prestigious ready-to-move mega plotting project
                     spanning across{" "}
                     <span className="font-semibold">6 acres</span> of prime land
-                    at Mangalpur, Bhubaneswar. This thoughtfully designed
-                    gated community offers a perfect blend of modern amenities
-                    and natural surroundings, creating an ideal environment for
-                    your dream home. The property enjoys excellent connectivity
-                    via the proposed{" "}
+                    at Mangalpur, Bhubaneswar. This thoughtfully designed gated
+                    community offers a perfect blend of modern amenities and
+                    natural surroundings, creating an ideal environment for your
+                    dream home. The property enjoys excellent connectivity via
+                    the proposed{" "}
                     <span className="font-semibold">
                       30ft Revenue Black Top Road
                     </span>
@@ -344,7 +345,26 @@ const ShreekhetraVihar1New = () => {
                   connectivity and peaceful residential living.
                 </p>
               </motion.div>
-
+              {/* Amenities */}
+              <motion.div
+                className="mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+              >
+                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
+                  Amenities & Features
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-4">
+                  {project.amenities.map((amenity, index) => (
+                    <div key={index} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                      <span className="text-gray-700 font-exo">{amenity}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
               {/* Plot Sizes */}
               <motion.div
                 className="mb-12"
@@ -352,9 +372,9 @@ const ShreekhetraVihar1New = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative inline-block">
+                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Available Plot Sizes
-                  <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {project.plotSizes.map((size, index) => (
@@ -371,27 +391,6 @@ const ShreekhetraVihar1New = () => {
                 </div>
               </motion.div>
 
-              {/* Amenities */}
-              <motion.div
-                className="mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-              >
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative inline-block">
-                  Amenities & Features
-                  <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600"></div>
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-4">
-                  {project.amenities.map((amenity, index) => (
-                    <div key={index} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700 font-exo">{amenity}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
               {/* Location */}
               <motion.div
                 className="mb-12"
@@ -399,9 +398,9 @@ const ShreekhetraVihar1New = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative inline-block">
+                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Location
-                  <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
                 </h2>
                 <div className="bg-blue-50 rounded-xl p-6 shadow-sm">
                   <div className="flex items-start mb-4">
@@ -499,7 +498,7 @@ const ShreekhetraVihar1New = () => {
                       {project.totalUnits}
                     </span>
                   </div>
-                 
+
                   <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
                     <span className="text-gray-700 font-exo">
                       Project Status

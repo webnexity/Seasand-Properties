@@ -10,6 +10,7 @@ import {
   Users,
   MapPin,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   // Animation variants
@@ -340,13 +341,16 @@ const About = () => {
               Let's collaborate to create spaces that inspire, endure, and
               elevate. Your vision is our mission.
             </p>
-            <motion.button
+            <Link to="/contact">
+             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-blue-700 px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 font-exo"
+              className="bg-white cursor-pointer text-blue-700 px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 font-exo"
             >
               Contact Us Today
-            </motion.button>
+            </motion.button>    
+            </Link>
+           
           </div>
         </motion.div>
       </div>

@@ -160,7 +160,7 @@ const Projects = () => {
           className="relative h-[50vh] bg-cover bg-center bg-fixed"
           style={{
             backgroundImage:
-              "url('https://images.pexels.com/photos/7108227/pexels-photo-7108227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+              "url('/projects_hero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-black/60"></div>
@@ -210,7 +210,7 @@ const Projects = () => {
             <div className="flex justify-between items-center mb-12">
               <h2 className="text-3xl font-bold text-gray-800 font-exo relative">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
-                  Previous Projects
+                  Completed Projects
                 </span>
                 <div className="absolute -bottom-2 left-0 w-20 h-1 bg-blue-600"></div>
               </h2>
@@ -238,10 +238,7 @@ const Projects = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-80"></div>
                     <div className="absolute top-4 left-4 z-10">
-                      <span className="bg-blue-600 text-white text-sm px-4 py-1.5 rounded-full font-semibold flex items-center">
-                        <Clock className="w-3.5 h-3.5 mr-1.5" />
-                        Coming Soon
-                      </span>
+                      
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
                       <div className="flex items-center mb-2">
@@ -294,7 +291,7 @@ const Projects = () => {
               <div className="flex justify-between items-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-800 font-exo relative">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-800">
-                    Completed Projects
+                    Previous Projects
                   </span>
                   <div className="absolute -bottom-2 left-0 w-20 h-1 bg-green-600"></div>
                 </h2>

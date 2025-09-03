@@ -71,14 +71,11 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               className="inline-flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-full font-medium text-sm mb-8 cursor-pointer"
             >
-              <Link
-                to="/projects"
-                className="flex items-center gap-2"
-              >
+              <Link to="/projects" className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-black rounded-full animate-pulse"></span>
-                NEW
-                <span className="ml-2 text-gray-700">Properties </span>
-                <ArrowRight className="w-4 h-4" />
+                Get
+                <span className="ml-2 text-gray-700">One day registration </span>
+                
               </Link>
             </motion.div>
 
@@ -87,8 +84,10 @@ const Hero = () => {
               variants={itemVariants}
               className="text-5xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6 font-exo"
             >
-              Get <span className="">Your dream  <span className="text-blue-600 block">Property</span> </span>
-             
+              Get{" "}
+              <span className="">
+                Your dream <span className="text-blue-600 block">Property</span>{" "}
+              </span>
             </motion.h1>
 
             {/* Description */}
@@ -103,16 +102,18 @@ const Hero = () => {
 
             {/* CTA Button */}
             <motion.div variants={itemVariants}>
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 flex gap-2 items-center cursor-pointer justify-center text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg font-exo"
-              >
-                Know more <IoArrowForwardOutline />
-              </motion.button>
+              <Link to="/projects">
+                <motion.button
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-blue-600 flex gap-2 items-center cursor-pointer justify-center text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg font-exo"
+                >
+                  Know more <IoArrowForwardOutline />
+                </motion.button>
+              </Link>
             </motion.div>
 
             {/* Stats */}
@@ -198,7 +199,7 @@ const Hero = () => {
                       Growth Focused
                     </div>
                     <div className="text-sm text-gray-600">
-                      Scalable office solutions
+                      Best Properties
                     </div>
                   </div>
                 </div>

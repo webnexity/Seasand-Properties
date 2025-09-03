@@ -64,7 +64,6 @@ const ShreekhetraVihar4 = () => {
     contactEmail: "info@seasandproperties.com",
     contactAddress: "Plot No. 12, Patia, Bhubaneswar, Odisha - 751024",
     images: [
-        
       "/Shreekhetravihar-4-9.jpeg",
       "/Shreekhetravihar-4-7.jpeg",
       "/Shreekhetravihar-4-10.jpeg",
@@ -72,7 +71,7 @@ const ShreekhetraVihar4 = () => {
       "/Shreekhetravihar-4-8.jpeg",
       "/Shreekhetravihar-4-4.jpeg",
       "/Shreekhetravihar-4-map1.jpeg",
-       "/Shreekhetravihar-4-map2.jpeg",
+      "/Shreekhetravihar-4-map2.jpeg",
     ],
     locationMap:
       "https://maps.googleapis.com/maps/api/staticmap?center=Bhubaneswar,Odisha&zoom=14&size=600x300&key=YOUR_API_KEY",
@@ -163,10 +162,10 @@ const ShreekhetraVihar4 = () => {
       </div>
 
       <main className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-12 gap-12">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid lg:grid-row-12 gap-12">
             {/* Main Content */}
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-8 mx-auto lg:mx-0">
               {/* Gallery */}
               <motion.div
                 className="mb-12"
@@ -200,6 +199,17 @@ const ShreekhetraVihar4 = () => {
                     </div>
                   ))}
                 </div>
+                <div className="flex justify-center mt-6">
+                  <button
+                    onClick={() =>
+                      window.open(`${project.locationMap}`, "_blank")
+                    }
+                    className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg flex items-center transition duration-300 font-exo shadow-md"
+                  >
+                    <MapPin className="w-5 h-5 mr-2" />
+                    View Map
+                  </button>
+                </div>
               </motion.div>
 
               {/* About Section */}
@@ -209,9 +219,9 @@ const ShreekhetraVihar4 = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative inline-block">
+                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   About {project.name}
-                  <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
                 </h2>
                 <p className="text-gray-700 leading-relaxed font-exo mb-6">
                   {project.description}
@@ -234,9 +244,9 @@ const ShreekhetraVihar4 = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative inline-block">
+                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Available Plot Sizes
-                  <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {project.plotSizes.map((size, index) => (
@@ -260,9 +270,9 @@ const ShreekhetraVihar4 = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative inline-block">
+                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Amenities & Features
-                  <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-4">
                   {project.amenities.map((amenity, index) => (
@@ -281,9 +291,9 @@ const ShreekhetraVihar4 = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative inline-block">
+                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Location
-                  <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
                 </h2>
                 <div className="bg-blue-50 rounded-xl p-6 shadow-sm">
                   <div className="flex items-start mb-4">
@@ -468,4 +478,3 @@ const ShreekhetraVihar4 = () => {
 };
 
 export default ShreekhetraVihar4;
-
