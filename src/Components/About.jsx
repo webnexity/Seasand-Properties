@@ -45,7 +45,7 @@ const About = () => {
         >
           {/* Logo */}
           <motion.div variants={fadeIn} className="mb-8 inline-block">
-            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg">
+            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-red-700 to-blue-800 rounded-xl flex items-center justify-center shadow-lg">
               <Building className="w-12 h-12 text-white" />
             </div>
           </motion.div>
@@ -54,7 +54,7 @@ const About = () => {
             variants={fadeIn}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 font-exo"
           >
-            About <span className="text-blue-600">Seasand Properties</span>
+            About <span className="text-red-700">Seasand Properties</span>
           </motion.h1>
 
           <motion.div variants={fadeIn} className="max-w-3xl mx-auto">
@@ -86,8 +86,8 @@ const About = () => {
                       Our Journey
                     </h2>
                     <div className="flex items-center mt-2">
-                      <Calendar className="w-5 h-5 text-blue-400 mr-2" />
-                      <span className="text-blue-200 font-medium font-exo">
+                      <Calendar className="w-5 h-5 text-red-400 mr-2" />
+                      <span className="text-white font-medium font-exo">
                         Since 2015
                       </span>
                     </div>
@@ -101,7 +101,7 @@ const About = () => {
 
                 <div className="space-y-6">
                   <p className="text-gray-600 leading-relaxed font-exo">
-                    <span className="font-semibold text-blue-600">
+                    <span className="font-semibold text-red-700">
                       Seasand Properties
                     </span>{" "}
                     has transformed the real estate landscape for over one
@@ -118,7 +118,7 @@ const About = () => {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <TrendingUp className="w-6 h-6 text-blue-600 mt-1" />
+                    <TrendingUp className="w-6 h-6 text-red-700 mt-1" />
                     <div>
                       <h4 className="font-bold text-gray-900 font-exo">
                         Growth Trajectory
@@ -145,7 +145,7 @@ const About = () => {
               className="grid grid-cols-2 gap-6"
             >
               <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2 font-exo">
+                <div className="text-4xl font-bold text-red-700 mb-2 font-exo">
                   20+
                 </div>
                 <div className="text-gray-600 font-medium font-exo">
@@ -153,7 +153,7 @@ const About = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2 font-exo">
+                <div className="text-4xl font-bold text-red-700 mb-2 font-exo">
                   500+
                 </div>
                 <div className="text-gray-600 font-medium font-exo">
@@ -161,7 +161,7 @@ const About = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2 font-exo">
+                <div className="text-4xl font-bold text-red-700 mb-2 font-exo">
                   50+
                 </div>
                 <div className="text-gray-600 font-medium font-exo">
@@ -169,7 +169,7 @@ const About = () => {
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2 font-exo">
+                <div className="text-4xl font-bold text-red-700 mb-2 font-exo">
                   98%
                 </div>
                 <div className="text-gray-600 font-medium font-exo">
@@ -186,7 +186,7 @@ const About = () => {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center font-exo">
-                <Award className="w-6 h-6 text-blue-600 mr-3" />
+                <Award className="w-6 h-6 text-red-700 mr-3" />
                 Notable Projects
               </h3>
 
@@ -251,11 +251,11 @@ const About = () => {
               transition={{ duration: 0.3 }}
               className="bg-white rounded-xl shadow-lg p-6 relative"
             >
-              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-red-700 rounded-full flex items-center justify-center text-white font-bold">
                 1
               </div>
               <div className="text-center pt-6">
-                <Users className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+                <Users className="w-10 h-10 text-red-700 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2 font-exo">
                   Consult
                 </h3>
@@ -271,11 +271,11 @@ const About = () => {
               transition={{ duration: 0.3 }}
               className="bg-white rounded-xl shadow-lg p-6 relative"
             >
-              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-red-700 rounded-full flex items-center justify-center text-white font-bold">
                 2
               </div>
               <div className="text-center pt-6">
-                <MapPin className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+                <MapPin className="w-10 h-10 text-red-700 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2 font-exo">Plan</h3>
                 <p className="text-gray-600 text-sm font-exo">
                   Our experts develop comprehensive plans aligned with your
@@ -289,11 +289,11 @@ const About = () => {
               transition={{ duration: 0.3 }}
               className="bg-white rounded-xl shadow-lg p-6 relative"
             >
-              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-red-700 rounded-full flex items-center justify-center text-white font-bold">
                 3
               </div>
               <div className="text-center pt-6">
-                <Building className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+                <Building className="w-10 h-10 text-red-700 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2 font-exo">
                   Execute
                 </h3>
@@ -309,11 +309,11 @@ const About = () => {
               transition={{ duration: 0.3 }}
               className="bg-white rounded-xl shadow-lg p-6 relative"
             >
-              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-red-700 rounded-full flex items-center justify-center text-white font-bold">
                 4
               </div>
               <div className="text-center pt-6">
-                <Award className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+                <Award className="w-10 h-10 text-red-700 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2 font-exo">
                   Deliver
                 </h3>
@@ -333,7 +333,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-20 text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-10 shadow-xl">
+          <div className="bg-gradient-to-r from-red-700 to-blue-800 rounded-2xl p-10 shadow-xl">
             <h2 className="text-3xl font-bold text-white mb-6 font-exo">
               Ready to start your next project?
             </h2>
@@ -342,15 +342,14 @@ const About = () => {
               elevate. Your vision is our mission.
             </p>
             <Link to="/contact">
-             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white cursor-pointer text-blue-700 px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 font-exo"
-            >
-              Contact Us Today
-            </motion.button>    
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white cursor-pointer text-red-700 hover:bg-red-700 hover:text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 font-exo"
+              >
+                Contact Us Today
+              </motion.button>
             </Link>
-           
           </div>
         </motion.div>
       </div>

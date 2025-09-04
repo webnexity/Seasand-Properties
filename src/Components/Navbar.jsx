@@ -98,7 +98,7 @@ const Navbar = () => {
             >
               <NavLink to="/" className="flex items-center">
                 <img src="/logo.png" alt="Logo" className="h-10 w-auto mr-3" />
-                <h1 className="text-2xl font-bold text-gray-900 font-exo">
+                <h1 className="text-2xl font-bold text-gray-900 hover:text-red-700 font-exo">
                   Seasand Properties
                 </h1>
               </NavLink>
@@ -119,14 +119,14 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       `flex items-center space-x-1 px-2 py-2 font-medium text-base transition-all duration-300 group font-exo ${
                         isActive
-                          ? "text-blue-600"
+                          ? "text-red-700"
                           : "text-gray-900 hover:text-gray-700"
                       }`
                     }
                   >
                     <span>{item.name}</span>
                   </NavLink>
-                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
+                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
                 </motion.div>
               ))}
             </div>
@@ -143,7 +143,7 @@ const Navbar = () => {
               >
                 <NavLink
                   to="/contact"
-                  className="hidden md:flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold text-base transition-all duration-300 font-exo"
+                  className="hidden md:flex items-center bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-md font-semibold text-base transition-all duration-300 font-exo"
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Contact us
@@ -204,7 +204,7 @@ const Navbar = () => {
                   className="flex items-center"
                 >
                   <img src="/logo.png" alt="Logo" className="h-8 w-auto mr-2" />
-                  <h1 className="text-xl font-bold text-gray-900 font-exo">
+                  <h1 className="text-xl font-bold text-gray-900 hover:text-red-700 font-exo">
                     Seasand Properties
                   </h1>
                 </NavLink>
@@ -233,7 +233,7 @@ const Navbar = () => {
                         className={({ isActive }) =>
                           `flex items-center text-2xl font-semibold transition-colors duration-300 font-exo ${
                             isActive
-                              ? "text-blue-600"
+                              ? "text-red-700"
                               : "text-gray-800 hover:text-blue-500"
                           }`
                         }
@@ -256,7 +256,7 @@ const Navbar = () => {
                       className={({ isActive }) =>
                         `flex items-center text-2xl font-semibold transition-colors duration-300 font-exo ${
                           isActive
-                            ? "text-blue-600"
+                            ? "text-red-700"
                             : "text-gray-800 hover:text-blue-500"
                         }`
                       }
@@ -273,28 +273,28 @@ const Navbar = () => {
                   <motion.a
                     href="#"
                     whileHover={{ scale: 1.2, y: -3 }}
-                    className="text-gray-500 hover:text-blue-600"
+                    className="text-gray-500 hover:text-red-700"
                   >
                     <Facebook size={22} />
                   </motion.a>
                   <motion.a
                     href="#"
                     whileHover={{ scale: 1.2, y: -3 }}
-                    className="text-gray-500 hover:text-blue-600"
+                    className="text-gray-500 hover:text-red-700"
                   >
                     <Twitter size={22} />
                   </motion.a>
                   <motion.a
                     href="#"
                     whileHover={{ scale: 1.2, y: -3 }}
-                    className="text-gray-500 hover:text-blue-600"
+                    className="text-gray-500 hover:text-red-700"
                   >
                     <Instagram size={22} />
                   </motion.a>
                   <motion.a
                     href="#"
                     whileHover={{ scale: 1.2, y: -3 }}
-                    className="text-gray-500 hover:text-blue-600"
+                    className="text-gray-500 hover:text-red-700"
                   >
                     <Linkedin size={22} />
                   </motion.a>

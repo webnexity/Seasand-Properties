@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { BiSupport } from "react-icons/bi";
 import {
   ArrowLeft,
   MapPin,
@@ -144,7 +145,7 @@ const ShreekhetraVihar4 = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 mt-6">
-              <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+              <span className="bg-red-700 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                 <Clock className="w-4 h-4 mr-2" />
                 {project.status}
               </span>
@@ -186,7 +187,7 @@ const ShreekhetraVihar4 = () => {
                       key={index}
                       className={`rounded-lg overflow-hidden h-24 cursor-pointer border-2 ${
                         activeImage === index
-                          ? "border-blue-600"
+                          ? "border-red-700"
                           : "border-transparent"
                       }`}
                       onClick={() => setActiveImage(index)}
@@ -204,7 +205,7 @@ const ShreekhetraVihar4 = () => {
                     onClick={() =>
                       window.open(`${project.locationMap}`, "_blank")
                     }
-                    className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg flex items-center transition duration-300 font-exo shadow-md"
+                    className="bg-red-700 cursor-pointer hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-lg flex items-center transition duration-300 font-exo shadow-md"
                   >
                     <MapPin className="w-5 h-5 mr-2" />
                     View Map
@@ -221,7 +222,7 @@ const ShreekhetraVihar4 = () => {
               >
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   About {project.name}
-                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700"></div>
                 </h2>
                 <p className="text-gray-700 leading-relaxed font-exo mb-6">
                   {project.description}
@@ -246,7 +247,7 @@ const ShreekhetraVihar4 = () => {
               >
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Available Plot Sizes
-                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700"></div>
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {project.plotSizes.map((size, index) => (
@@ -254,7 +255,7 @@ const ShreekhetraVihar4 = () => {
                       key={index}
                       className="bg-blue-50 border border-blue-100 rounded-lg p-4 text-center hover:bg-blue-100 transition-colors duration-300"
                     >
-                      <Home className="w-8 h-8 mx-auto mb-2 text-blue-600" />
+                      <Home className="w-8 h-8 mx-auto mb-2 text-red-700" />
                       <span className="font-semibold text-gray-800 font-exo">
                         {size}
                       </span>
@@ -272,7 +273,7 @@ const ShreekhetraVihar4 = () => {
               >
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Amenities & Features
-                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700"></div>
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-4">
                   {project.amenities.map((amenity, index) => (
@@ -293,11 +294,11 @@ const ShreekhetraVihar4 = () => {
               >
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Location
-                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-blue-600"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700"></div>
                 </h2>
                 <div className="bg-blue-50 rounded-xl p-6 shadow-sm">
                   <div className="flex items-start mb-4">
-                    <MapPin className="w-5 h-5 text-blue-600 mr-3 mt-1" />
+                    <MapPin className="w-5 h-5 text-red-700 mr-3 mt-1" />
                     <p className="text-gray-700 font-exo">
                       {project.locationDetails}
                     </p>
@@ -322,14 +323,14 @@ const ShreekhetraVihar4 = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
               >
-                <div className="bg-blue-600 py-4 px-6">
+                <div className="bg-red-700 py-4 px-6">
                   <h3 className="text-xl font-bold text-white font-exo">
                     Contact Information
                   </h3>
                 </div>
                 <div className="p-6">
                   <div className="flex items-start mb-4">
-                    <Phone className="w-5 h-5 text-blue-600 mr-3 mt-1" />
+                    <Phone className="w-5 h-5 text-red-700 mr-3 mt-1" />
                     <div>
                       <p className="text-gray-800 font-semibold font-exo">
                         Phone
@@ -340,7 +341,7 @@ const ShreekhetraVihar4 = () => {
                     </div>
                   </div>
                   <div className="flex items-start mb-4">
-                    <Mail className="w-5 h-5 text-blue-600 mr-3 mt-1" />
+                    <Mail className="w-5 h-5 text-red-700 mr-3 mt-1" />
                     <div>
                       <p className="text-gray-800 font-semibold font-exo">
                         Email
@@ -351,7 +352,7 @@ const ShreekhetraVihar4 = () => {
                     </div>
                   </div>
                   <div className="flex items-start mb-4">
-                    <MapPin className="w-5 h-5 text-blue-600 mr-3 mt-1" />
+                    <MapPin className="w-5 h-5 text-red-700 mr-3 mt-1" />
                     <div>
                       <p className="text-gray-800 font-semibold font-exo">
                         Address
@@ -364,9 +365,9 @@ const ShreekhetraVihar4 = () => {
                   <div className="mt-6">
                     <Link
                       to="/contact"
-                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition duration-300 font-exo"
+                      className=" w-full flex justify-center items-center gap-2 bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-4 rounded-lg text-center transition duration-300 font-exo"
                     >
-                      Enquire Now
+                      Enquire Now <BiSupport className="text-white text-lg" />
                     </Link>
                   </div>
                 </div>
@@ -445,7 +446,7 @@ const ShreekhetraVihar4 = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 right-4">
-                    <span className="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                    <span className="bg-red-700 text-white text-xs px-3 py-1 rounded-full font-semibold">
                       {item.status}
                     </span>
                   </div>
@@ -455,7 +456,7 @@ const ShreekhetraVihar4 = () => {
                     {item.name}
                   </h3>
                   <div className="flex items-center text-gray-600 mb-4">
-                    <MapPin className="w-4 h-4 mr-1 text-blue-600" />
+                    <MapPin className="w-4 h-4 mr-1 text-red-700" />
                     <span className="text-sm font-exo">{item.location}</span>
                   </div>
                   <p className="text-gray-600 mb-4 line-clamp-2 font-exo">
@@ -463,7 +464,7 @@ const ShreekhetraVihar4 = () => {
                   </p>
                   <Link
                     to={`/projects/${item.id}`}
-                    className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-center transition duration-300 font-exo"
+                    className="block w-full bg-red-700 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-center transition duration-300 font-exo"
                   >
                     View Details
                   </Link>

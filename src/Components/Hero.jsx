@@ -74,8 +74,9 @@ const Hero = () => {
               <Link to="/projects" className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-black rounded-full animate-pulse"></span>
                 Get
-                <span className="ml-2 text-gray-700">One day registration </span>
-                
+                <span className="ml-2 text-gray-700">
+                  One day registration{" "}
+                </span>
               </Link>
             </motion.div>
 
@@ -86,7 +87,7 @@ const Hero = () => {
             >
               Get{" "}
               <span className="">
-                Your dream <span className="text-blue-600 block">Property</span>{" "}
+                Your dream <span className="text-red-700 block">Property</span>{" "}
               </span>
             </motion.h1>
 
@@ -109,7 +110,7 @@ const Hero = () => {
                     boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 flex gap-2 items-center cursor-pointer justify-center text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg font-exo"
+                  className="bg-red-700 flex gap-2 items-center cursor-pointer justify-center text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-red-800 transition-all duration-300 shadow-lg font-exo"
                 >
                   Know more <IoArrowForwardOutline />
                 </motion.button>
@@ -174,7 +175,7 @@ const Hero = () => {
                 className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg"
               >
                 <div className="flex items-center gap-3">
-                  <Building2 className="w-8 h-8 text-blue-600" />
+                  <Building2 className="w-8 h-8 text-red-700" />
                   <div>
                     <div className="font-bold text-gray-900">
                       Premium Locations
@@ -198,9 +199,7 @@ const Hero = () => {
                     <div className="font-bold text-gray-900">
                       Growth Focused
                     </div>
-                    <div className="text-sm text-gray-600">
-                      Best Properties
-                    </div>
+                    <div className="text-sm text-gray-600">Best Properties</div>
                   </div>
                 </div>
               </motion.div>
@@ -262,7 +261,7 @@ const Hero = () => {
               whileHover={{ y: -5 }}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <MapPin className="w-12 h-12 text-blue-600 mb-4" />
+              <MapPin className="w-12 h-12 text-red-700 mb-4" />
               <h3 className="font-bold text-xl mb-2">Prime Locations</h3>
               <p className="text-gray-600">
                 Strategic locations in major business districts and emerging

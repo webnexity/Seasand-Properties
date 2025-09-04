@@ -18,8 +18,7 @@ const upcomingProjects = [
   {
     name: "Shreekhetra Vihar - 1",
     slug: "shreekhetra-vihar-1",
-    image:
-      "/Shreeketravihar-1-6.jpeg",
+    image: "/Shreeketravihar-1-6.jpeg",
     location: "Bhubaneswar-Puri NH",
     description:
       "Experience luxury living with a sea view. Premium plots for your dream home.",
@@ -34,8 +33,7 @@ const upcomingProjects = [
   {
     name: "Shreekhetra Vihar - 2",
     slug: "shreekhetra-vihar-2",
-    image:
-      "/Shreeketravihar-2-9.jpeg",
+    image: "/Shreeketravihar-2-9.jpeg",
     location: "Near Puri",
     description:
       "A serene and peaceful environment, perfect for building a family home away from the city hustle.",
@@ -53,8 +51,7 @@ const upcomingProjects = [
   {
     name: "Shreekhetra Vihar - 3",
     slug: "shreekhetra-vihar-3",
-    image:
-      "/Shreekhetravihar-3-6.jpeg",
+    image: "/Shreekhetravihar-3-6.jpeg",
     location: "Sakhigopal, Puri",
     description:
       "Invest in the future with these strategically located plots with high appreciation potential.",
@@ -69,8 +66,7 @@ const upcomingProjects = [
   {
     name: "Shreekhetra Vihar 4",
     slug: "shreekhetra-vihar-4",
-    image:
-      "/Shreekhetravihar-4-6.jpeg",
+    image: "/Shreekhetravihar-4-6.jpeg",
     location: "Bhubaneswar",
     description:
       "A golden opportunity to make your dream come true at an affordable budget with maximum facility.",
@@ -159,8 +155,7 @@ const Projects = () => {
         <div
           className="relative h-[50vh] bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage:
-              "url('/projects_hero.jpg')",
+            backgroundImage: "url('/projects_hero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-black/60"></div>
@@ -209,12 +204,12 @@ const Projects = () => {
           <div className="mb-24">
             <div className="flex justify-between items-center mb-12">
               <h2 className="text-3xl font-bold text-gray-800 font-exo relative">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-700 to-blue-800">
                   Completed Projects
                 </span>
-                <div className="absolute -bottom-2 left-0 w-20 h-1 bg-blue-600"></div>
+                <div className="absolute -bottom-2 left-0 w-20 h-1 bg-red-700"></div>
               </h2>
-              <div className="hidden md:block text-blue-600 font-semibold font-exo">
+              <div className="hidden md:block text-red-700 font-semibold font-exo">
                 Limited Plots Available
               </div>
             </div>
@@ -237,9 +232,7 @@ const Projects = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-80"></div>
-                    <div className="absolute top-4 left-4 z-10">
-                      
-                    </div>
+                    <div className="absolute top-4 left-4 z-10"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
                       <div className="flex items-center mb-2">
                         <MapPin className="w-5 h-5 mr-2 text-blue-400" />
@@ -268,12 +261,12 @@ const Projects = () => {
                     </p>
 
                     <div className="flex justify-between items-center">
-                      <div className="text-blue-700 font-semibold text-sm bg-blue-50 px-3 py-1 rounded-lg">
+                      <div className="text-red-700 font-semibold text-sm bg-blue-50 px-3 py-1 rounded-lg">
                         <span className="font-exo">Limited Plots</span>
                       </div>
                       <Link
                         to={`/projects/${project.slug}`}
-                        className="flex items-center font-semibold text-blue-600 hover:text-blue-800 transition-colors duration-300 group/link"
+                        className="flex items-center font-semibold text-red-700 hover:text-red-800 transition-colors duration-300 group/link"
                       >
                         <span className="font-exo">Explore</span>
                         <ArrowRight className="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform duration-300" />
@@ -291,7 +284,7 @@ const Projects = () => {
               <div className="flex justify-between items-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-800 font-exo relative">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-800">
-                    Previous Projects
+                    Upcomming Projects
                   </span>
                   <div className="absolute -bottom-2 left-0 w-20 h-1 bg-green-600"></div>
                 </h2>
@@ -377,7 +370,7 @@ const Projects = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-600 z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-red-700 z-0"></div>
             <div
               className="absolute inset-0 opacity-20 z-0"
               style={{
@@ -402,7 +395,7 @@ const Projects = () => {
               <div className="flex flex-wrap justify-center gap-6">
                 <Link
                   to="/contact"
-                  className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold transition-colors duration-300 font-exo flex items-center"
+                  className="bg-white text-red-700 hover:bg-red-700 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300 font-exo flex items-center"
                 >
                   <span>Schedule a Site Visit</span>
                   <ArrowRight className="w-4 h-4 ml-2" />

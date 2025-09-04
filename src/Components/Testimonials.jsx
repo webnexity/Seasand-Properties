@@ -187,7 +187,7 @@ const Testimonials = () => {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <Link
               to="/contact"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-semibold transition-colors duration-300 font-exo"
+              className="inline-block bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-md font-semibold transition-colors duration-300 font-exo"
             >
               Contact Us Today
             </Link>

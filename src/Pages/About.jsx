@@ -61,25 +61,25 @@ const About = () => {
 
   const stats = [
     {
-      icon: <Award className="w-10 h-10 text-blue-500" />,
+      icon: <Award className="w-10 h-10 text-white" />,
       end: 10,
       label: "Years of Experience",
       suffix: "+",
     },
     {
-      icon: <Users className="w-10 h-10 text-blue-500" />,
+      icon: <Users className="w-10 h-10 text-white" />,
       end: 1000,
       label: "Happy Clients",
       suffix: "+",
     },
     {
-      icon: <Home className="w-10 h-10 text-blue-500" />,
+      icon: <Home className="w-10 h-10 text-white" />,
       end: 500,
       label: "Plots Delivered",
       suffix: "+",
     },
     {
-      icon: <TrendingUp className="w-10 h-10 text-blue-500" />,
+      icon: <TrendingUp className="w-10 h-10 text-white" />,
       end: 98,
       label: "Customer Satisfaction",
       suffix: "%",
@@ -117,7 +117,7 @@ const About = () => {
     <div className="bg-white">
       <Navbar />
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-blue-600 origin-left z-[101]"
+        className="fixed top-0 left-0 right-0 h-1 bg-red-700 origin-left z-[101]"
         style={{ scaleX }}
       />
 
@@ -161,8 +161,8 @@ const About = () => {
                 “Seasand Properties” is a certified company with over 10 years
                 of experience, backed by a team of registered architects and
                 seasoned real-estate professionals. Our dream is to create homes
-                for millions, and our maiden project, “THE Shreekhetra Vihar 4,” was a
-                humble beginning towards that vision.
+                for millions, and our maiden project, “THE Shreekhetra Vihar 4,”
+                was a humble beginning towards that vision.
               </p>
               <p className="text-gray-700 font-exo">
                 Our reputation is built on a foundation of self-discipline,
@@ -187,7 +187,7 @@ const About = () => {
         </div>
 
         {/* Stats Counter Section */}
-        <div className="py-20 bg-gray-900 text-white">
+        <div className="py-20 bg-red-700 text-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {stats.map((stat, index) => (
@@ -197,14 +197,14 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex flex-col items-center"
+                  className="flex flex-col items-center text-white"
                 >
                   {stat.icon}
                   <p className="text-4xl md:text-5xl font-bold mt-3">
                     <Counter from={0} to={stat.end} duration={2} />
                     {stat.suffix}
                   </p>
-                  <p className="text-gray-400 mt-2 font-exo">{stat.label}</p>
+                  <p className="text-white mt-2 font-exo">{stat.label}</p>
                 </motion.div>
               ))}
             </div>

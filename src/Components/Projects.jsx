@@ -95,13 +95,13 @@ const ProjectsShowcase = () => {
 
   const tabVariants = {
     active: {
-      backgroundColor: "#2563eb",
+      backgroundColor: "#b91c1c", // red-700
       color: "#ffffff",
       scale: 1.02,
     },
     inactive: {
       backgroundColor: "#ffffff",
-      color: "#2563eb",
+      color: "#b91c1c", // red-700
       scale: 1,
     },
   };
@@ -148,7 +148,7 @@ const ProjectsShowcase = () => {
           className="text-center mb-12"
         >
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-blue-600">Projects</span>
+            Our <span className="text-red-700">Projects</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Discover our portfolio of exceptional properties that redefine
@@ -169,7 +169,10 @@ const ProjectsShowcase = () => {
                 key={tab}
                 variants={tabVariants}
                 animate={activeTab === tab ? "active" : "inactive"}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{
+                  scale: 1.05,
+                  backgroundColor: activeTab === tab ? "#dc2626" : "#fee2e2",
+                }} // red-600 when active, red-100 when inactive
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setActiveTab(tab)}
                 className="px-8 py-3 rounded-full cursor-pointer font-semibold text-lg mx-1 border-2 border-transparent transition-all duration-300 capitalize"
@@ -216,7 +219,7 @@ const ProjectsShowcase = () => {
                       className={`px-3 py-1 rounded-full text-sm font-semibold ${
                         activeTab === "previous"
                           ? "bg-green-100 text-green-700"
-                          : "bg-blue-100 text-blue-700"
+                          : "bg-blue-100 text-red-700"
                       }`}
                     >
                       {project.status}
@@ -250,7 +253,7 @@ const ProjectsShowcase = () => {
                     <motion.button
                       whileHover={{ scale: 1.02, backgroundColor: "#1d4ed8" }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full cursor-pointer bg-blue-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors duration-300"
+                      className="w-full cursor-pointer bg-red-700 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2  transition-colors duration-300 hover:bg-red-800"
                     >
                       Know More
                       <ArrowRight className="w-4 h-4" />
@@ -271,19 +274,19 @@ const ProjectsShowcase = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <h3 className="text-3xl font-bold text-blue-600 mb-2">25+</h3>
+              <h3 className="text-3xl font-bold text-red-700 mb-2">25+</h3>
               <p className="text-gray-600">Projects Completed</p>
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-blue-600 mb-2">5000+</h3>
+              <h3 className="text-3xl font-bold text-red-700 mb-2">5000+</h3>
               <p className="text-gray-600">Happy Families</p>
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-blue-600 mb-2">15+</h3>
+              <h3 className="text-3xl font-bold text-red-700 mb-2">15+</h3>
               <p className="text-gray-600">Years Experience</p>
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-blue-600 mb-2">4.8★</h3>
+              <h3 className="text-3xl font-bold text-red-700 mb-2">4.8★</h3>
               <p className="text-gray-600">Average Rating</p>
             </div>
           </div>
