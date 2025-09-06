@@ -74,13 +74,13 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <div className=" rounded-2xl shadow-xl overflow-hidden">
-              <div className="relative h-64">
+              <div className="relative h-full w-full h-64 md:h-80 lg:h-96">
                 <img
-                  src="/logo.png"
+                  src="/seasand_logo.jpeg"
                   alt="Seasand Properties Headquarters"
                   className="w-full h-full "
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <div className="absolute inset-0  flex items-end">
                   <div className="p-6">
                     <h2 className="text-white text-2xl font-bold font-exo">
                       Our Journey

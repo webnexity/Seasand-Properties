@@ -58,7 +58,7 @@ const ShreekhetraVihar1New = () => {
     contactPhone: "+91 98765 43210",
     contactEmail: "info@seasandproperties.com",
     contactAddress:
-      "Plot No. 420/3923, Lewis Road , Old Town , Bhubaneswar, Odisha - 751002",
+      "Plot no 2132/5124,Nageshwar tangi, Lewis road, old town ,Bhubaneswar, 751002",
     images: [
       "/Shreeketravihar-1-3.jpeg",
       "/Shreeketravihar-1-4.jpeg",

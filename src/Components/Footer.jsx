@@ -146,9 +146,9 @@ const Footer = () => {
                 >
                   <MapPin className="w-5 h-5 mr-3 mt-1 flex-shrink-0" />
                   <span className="font-exo hover:text-red-800">
-                    123 Business Park, Sector 15
+                    Plot no 2132/5124,Nageshwar tangi, Lewis road, old town 
                     <br />
-                    Mumbai, Maharashtra 400001
+                    Bhubaneswar, Odisha 751002
                     <br />
                     India
                   </span>
@@ -161,7 +161,7 @@ const Footer = () => {
                   whileHover={{ color: "#991b1b" }}
                 >
                   <Phone className="w-5 h-5 mr-3 flex-shrink-0" />
-                  +91 98765 43210
+                  0674-3588362
                 </motion.a>
               </li>
               <li>
