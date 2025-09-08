@@ -21,12 +21,12 @@ const upcomingProjects = [
     image: "/Shreeketravihar-1-6.jpeg",
     location: "Bhubaneswar-Puri NH",
     description:
-      "Experience luxury living with a sea view. Premium plots for your dream home.",
+      "Experience luxury living Society. Premium plots for your dream home.",
     keyDistances: ["5kms from Konark Temple", "10kms from Puri Beach"],
     amenities: [
-      "Sea view plots",
-      "40 feet main road",
-      "24/7 Security",
+      "Electrical facility",
+      "30 feet main road",
+      "Boundary Wall",
       "Landscaping & Parks",
     ],
   },

@@ -182,14 +182,14 @@ const Testimonials = () => {
           }}
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-6 font-exo">
-            Ready to find your dream property?
+            Are you part of Seasand Properties ?
           </h3>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <Link
-              to="/contact"
+              to="https://docs.google.com/forms/d/11ptui1Q7yFxdwkjQswfhZ_WknXxOoENb7xCMRCzrn7s/edit"
               className="inline-block bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-md font-semibold transition-colors duration-300 font-exo"
             >
-              Contact Us Today
+              Give your valuable feedback
             </Link>
           </motion.div>
         </motion.div>

@@ -23,11 +23,18 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const isScrolled = window.scrollY > 20;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    
+    // Initial check
+    handleScroll();
+    
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll, { passive: true });
+  }, [scrolled]);
 
   const menuItems = [
     { name: "Home", href: "/", icon: <HomeIcon className="w-5 h-5 mr-3" /> },
@@ -83,8 +90,10 @@ const Navbar = () => {
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "bg-white shadow-md" : "bg-white"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled 
+            ? "bg-white shadow-md" 
+            : "bg-black/30 backdrop-blur-sm"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -98,7 +107,9 @@ const Navbar = () => {
             >
               <NavLink to="/" className="flex items-center">
                 <img src="/logo.png" alt="Logo" className="h-10 w-auto mr-3" />
-                <h1 className="text-2xl font-bold text-gray-900 hover:text-red-700 font-exo">
+                <h1 className={`text-2xl font-bold font-exo ${
+                  scrolled ? "text-gray-900 hover:text-red-700" : "text-white hover:text-gray-200"
+                }`}>
                   Seasand Properties
                 </h1>
               </NavLink>
@@ -114,19 +125,30 @@ const Navbar = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative group"
                 >
-                  <NavLink
-                    to={item.href}
-                    className={({ isActive }) =>
-                      `flex items-center space-x-1 px-2 py-2 font-medium text-base transition-all duration-300 group font-exo ${
-                        isActive
-                          ? "text-red-700"
-                          : "text-gray-900 hover:text-gray-700"
-                      }`
-                    }
-                  >
-                    <span>{item.name}</span>
+                  <NavLink to={item.href}>
+                    {({ isActive }) => (
+                      <>
+                        <span
+                          className={`flex items-center space-x-1 px-2 py-2 font-medium text-base transition-all duration-300 group font-exo ${
+                            isActive
+                              ? "text-red-700 font-semibold"
+                              : scrolled
+                              ? "text-gray-900 hover:text-red-700"
+                              : "text-white/90 hover:text-white"
+                          }`}
+                        >
+                          {item.name}
+                        </span>
+                        <div
+                          className={`absolute bottom-0 left-0 w-full h-0.5 bg-red-700 ${
+                            isActive
+                              ? "scale-x-100"
+                              : "scale-x-0 group-hover:scale-x-100"
+                          } transition-transform duration-300 ease-out`}
+                        />
+                      </>
+                    )}
                   </NavLink>
-                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-red-700 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
                 </motion.div>
               ))}
             </div>
@@ -143,7 +165,11 @@ const Navbar = () => {
               >
                 <NavLink
                   to="/contact"
-                  className="hidden md:flex items-center bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded-md font-semibold text-base transition-all duration-300 font-exo"
+                  className={`hidden md:flex items-center px-6 py-3 rounded-md font-semibold text-base transition-all duration-300 font-exo ${
+                    scrolled 
+                      ? "bg-red-700 hover:bg-red-800 text-white" 
+                      : "bg-red-700 hover:bg-white/30 text-white border border-white/30"
+                  }`}
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Contact us
@@ -153,7 +179,9 @@ const Navbar = () => {
               {/* Mobile Toggle */}
               <button
                 onClick={toggleMenu}
-                className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${
+                  scrolled ? "hover:bg-gray-100" : "hover:bg-white/20"
+                }`}
               >
                 <div className="relative w-6 h-6">
                   <AnimatePresence mode="wait">
@@ -166,7 +194,7 @@ const Navbar = () => {
                         transition={{ duration: 0.3 }}
                         className="absolute inset-0 flex items-center justify-center"
                       >
-                        <X className="w-6 h-6 text-black" />
+                        <X className={`w-6 h-6 ${scrolled ? "text-black" : "text-white"}`} />
                       </motion.div>
                     ) : (
                       <motion.div
@@ -177,7 +205,7 @@ const Navbar = () => {
                         transition={{ duration: 0.3 }}
                         className="absolute inset-0 flex items-center justify-center"
                       >
-                        <Menu className="w-6 h-6 text-black" />
+                        <Menu className={`w-6 h-6 ${scrolled ? "text-black" : "text-white"}`} />
                       </motion.div>
                     )}
                   </AnimatePresence>

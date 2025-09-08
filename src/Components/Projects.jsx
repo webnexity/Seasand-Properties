@@ -278,15 +278,15 @@ const ProjectsShowcase = () => {
               <p className="text-gray-600">Projects Completed</p>
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-red-700 mb-2">5000+</h3>
+              <h3 className="text-3xl font-bold text-red-700 mb-2">500+</h3>
               <p className="text-gray-600">Happy Families</p>
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-red-700 mb-2">15+</h3>
+              <h3 className="text-3xl font-bold text-red-700 mb-2">10+</h3>
               <p className="text-gray-600">Years Experience</p>
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-red-700 mb-2">4.8★</h3>
+              <h3 className="text-3xl font-bold text-red-700 mb-2">4.9★</h3>
               <p className="text-gray-600">Average Rating</p>
             </div>
           </div>

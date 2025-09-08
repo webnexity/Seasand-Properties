@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { MdOutlineMail } from "react-icons/md";
+
 import {
   MapPin,
   Phone,
@@ -50,7 +52,7 @@ const Footer = () => {
             <div className="flex space-x-3">
               {/* Social Links */}
               <motion.a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/16qK3Qbchh/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors duration-300"
@@ -59,18 +61,9 @@ const Footer = () => {
               >
                 <Facebook className="w-4 h-4 text-white" />
               </motion.a>
+             
               <motion.a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors duration-300"
-                whileHover="hover"
-                variants={socialHover}
-              >
-                <Twitter className="w-4 h-4 text-white" />
-              </motion.a>
-              <motion.a
-                href="https://instagram.com"
+                href="https://www.instagram.com/seasandpropertiespvt.ltd?igsh=MW11NHc3bWIwdmlwbg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors duration-300"
@@ -80,25 +73,17 @@ const Footer = () => {
                 <Instagram className="w-4 h-4 text-white" />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="mailto:seasandpropertiespvtltd@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors duration-300"
                 whileHover="hover"
                 variants={socialHover}
               >
-                <Linkedin className="w-4 h-4 text-white" />
+                <MdOutlineMail className="w-4 h-4 text-white" />
               </motion.a>
-              <motion.a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors duration-300"
-                whileHover="hover"
-                variants={socialHover}
-              >
-                <Youtube className="w-4 h-4 text-white" />
-              </motion.a>
+
+             
             </div>
           </div>
 
@@ -166,12 +151,12 @@ const Footer = () => {
               </li>
               <li>
                 <motion.a
-                  href="mailto:info@seasandproperties.com"
+                  href="mailto:seasandpropertiespvtltd@gmail.com"
                   className="flex items-center text-gray-400 hover:text-red-800 transition-colors duration-300 font-exo"
                   whileHover={{ color: "#991b1b" }}
                 >
                   <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
-                  info@seasandproperties.com
+                  seasandpropertiespvtltd@gmail.com
                 </motion.a>
               </li>
               <li className="flex items-center text-gray-400 font-exo">

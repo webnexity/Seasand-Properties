@@ -40,11 +40,11 @@ const ShreekhetraVihar3 = () => {
     status: "Coming Soon",
     price: "Starting from ₹20 lakhs",
     availability: "Pre-launch Booking Open",
-    totalUnits: "30 Plots",
+    totalUnits: "99 Plots",
     availableUnits: "30 Plots",
     possessionDate: "June 2026",
-    plotSizes: ["1800 sq.ft", "2100 sq.ft", "2400 sq.ft", "3000 sq.ft"],
-    amenities: [
+    plotSizes: ["1500 sq.ft", "1800 sq.ft", "2200 sq.ft", "3000 sq.ft"],
+        amenities: [
       "24/7 Security with CCTV Surveillance",
       "Landscaped Gardens and Parks",
       "Children's Play Area",
@@ -59,9 +59,9 @@ const ShreekhetraVihar3 = () => {
       "Community Hall",
       "Walking and Jogging Track",
     ],
-    contactPhone: "+91 98765 43210",
-    contactEmail: "info@seasandproperties.com",
-    contactAddress: "Plot No. 12, Patia, Bhubaneswar, Odisha - 751024",
+    contactPhone: "0674-3588362",
+    contactEmail: "seasandpropertiespvtltd@gmail.com",
+    contactAddress: "Plot no 2132/5124,Nageshwar tangi, Lewis road, old town ,Bhubaneswar, 751002",
     images: [
       "/Shreekhetravihar-3-4.jpeg",
       "/Shreekhetravihar-3-2.jpeg",

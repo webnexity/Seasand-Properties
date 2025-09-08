@@ -39,10 +39,10 @@ const ShreekhetraVihar1New = () => {
     status: "Ready to start",
     price: "Very competative price",
     availability: "Few Plots Left",
-    totalUnits: "64 Plots",
+    totalUnits: "103 Plots",
 
     possessionDate: "Ready to Move",
-    plotSizes: ["1200 sq.ft", "1500 sq.ft", "2000 sq.ft", "4000 sq.ft"],
+    plotSizes: ["1500 sq.ft", "1800 sq.ft", "2200 sq.ft", "3000 sq.ft"],
     amenities: [
       "Home-Stead Land",
       "30ft. Developed Road",
@@ -55,10 +55,9 @@ const ShreekhetraVihar1New = () => {
       "Open space",
       "Plantation",
     ],
-    contactPhone: "+91 98765 43210",
-    contactEmail: "info@seasandproperties.com",
-    contactAddress:
-      "Plot no 2132/5124,Nageshwar tangi, Lewis road, old town ,Bhubaneswar, 751002",
+    contactPhone: "0674-3588362",
+    contactEmail: "seasandpropertiespvtltd@gmail.com",
+    contactAddress: "Plot no 2132/5124,Nageshwar tangi, Lewis road, old town ,Bhubaneswar, 751002",
     images: [
       "/Shreeketravihar-1-3.jpeg",
       "/Shreeketravihar-1-4.jpeg",
