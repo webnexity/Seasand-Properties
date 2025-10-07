@@ -25,43 +25,45 @@ const ShreekhetraVihar3 = () => {
   // Project Data
   const project = {
     id: "shreekhtera-vihar-3",
-    name: "Shreekhtera Vihar 3",
-    headline: "Luxury Residential Plots in Premium Location",
+    name: "Shreekhetra Vihar 3",
+    headline: "Ready to move mega plotting project at Pipili Square",
     description:
-      "Shreekhtera Vihar 3 offers luxurious residential plots with world-class amenities and exceptional connectivity in Bhubaneswar. Situated in an upcoming premium location, these plots provide an ideal setting for your dream home.",
+      "Shreekhetra Vihar Phase-3 is a ready to move highly developed mega plotting project located at Pipili Square. Total area of Project is 6 Acre. The gated community project is well connected by 100ft Bhubaneswar Puri N.H.316 Road.",
     fullDescription: [
-      "Shreekhtera Vihar 3 is our most exclusive residential plotting project designed for those seeking uncompromised luxury and comfort. Set in one of Bhubaneswar's most prestigious localities, this project offers an extraordinary living experience with premium amenities and strategic positioning.",
-      "Each plot in Shreekhtera Vihar 3 is thoughtfully designed to maximize space utilization while ensuring privacy and exclusivity. The project features wide tree-lined avenues, extensive green spaces, and state-of-the-art infrastructure to enhance your lifestyle.",
-      "With close proximity to key business districts, premium educational institutions, healthcare facilities, and entertainment hubs, Shreekhtera Vihar 3 offers the perfect blend of convenience and luxury living.",
+      "We are having 12+ years of experience in developing residential land projects across Bhubaneswar and we have gained the trust of 1200+ clients across Odisha.",
     ],
-    location: "Bhubaneswar, Odisha",
+    distances: [
+      "Close to N.H. (Pipili Square)",
+      "18KM from Bhubaneswar",
+      "Very Near to Pipili & Mangalapur Market, Medical",
+      "Jagannath Temple 35KM from Project",
+    ],
+    location: "Pipili Square, Bhubaneswar-Puri NH",
     locationDetails:
-      "Prime location in Bhubaneswar, just 2 km from Infocity, 5 km from KIIT University, and 7 km from city center with excellent connectivity to major highways and business districts.",
-    status: "Coming Soon",
-    price: "Starting from ₹20 lakhs",
-    availability: "Pre-launch Booking Open",
+      "Located at Pipili Square, the project is well connected by the 100ft Bhubaneswar-Puri N.H. 316 Road.",
+    status: "Completed",
+    price: "Very Competitive Price",
+    availability: "Completed",
     totalUnits: "99 Plots",
-    availableUnits: "30 Plots",
-    possessionDate: "June 2026",
+    availableUnits: "Few Units Left",
+    possessionDate: "Ready to Move",
     plotSizes: ["1500 sq.ft", "1800 sq.ft", "2200 sq.ft", "3000 sq.ft"],
-        amenities: [
-      "24/7 Security with CCTV Surveillance",
-      "Landscaped Gardens and Parks",
-      "Children's Play Area",
-      "40-feet Wide Internal Roads",
-      "Underground Electrical Wiring",
-      "Solar Street Lights",
-      "Water Supply System",
-      "Premium Clubhouse",
-      "Swimming Pool",
-      "Fitness Center",
-      "Indoor Games Room",
-      "Community Hall",
-      "Walking and Jogging Track",
+    amenities: [
+      "Home stead land",
+      "Drainage system",
+      "30ft developed road",
+      "Street light",
+      "Master boundary wall",
+      "Security Facility",
+      "Electrification",
+      "Plantation",
+      "Temple",
+      "Gated Community",
     ],
     contactPhone: "0674-3588362",
     contactEmail: "seasandpropertiespvtltd@gmail.com",
-    contactAddress: "Plot no 2132/5124,Nageshwar tangi, Lewis road, old town ,Bhubaneswar, 751002",
+    contactAddress:
+      "Plot no 2132/5124,Nageshwar tangi, Lewis road, old town ,Bhubaneswar, 751002",
     images: [
       "/Shreekhetravihar-3-4.jpeg",
       "/Shreekhetravihar-3-2.jpeg",
@@ -72,7 +74,7 @@ const ShreekhetraVihar3 = () => {
       "/Shreekhetravihar-3-7.jpeg",
     ],
     locationMap:
-      "https://maps.googleapis.com/maps/api/staticmap?center=Bhubaneswar,Odisha&zoom=14&size=600x300&key=YOUR_API_KEY",
+      "https://www.google.com/maps/place/20%C2%B004'20.6%22N+85%C2%B050'00.3%22E/@20.072385,85.833429,708m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d20.072385!4d85.833429?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D",
   };
 
   // Similar projects data
@@ -81,31 +83,25 @@ const ShreekhetraVihar3 = () => {
       id: "sai-vihar",
       name: "Sai Vihar",
       headline: "Premium Residential Plots",
-      location: "Bhubaneswar, Odisha",
-      status: "Under Construction",
-      images: [
-        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      ],
+      location: "Jagannathpur, Bhubaneswar",
+      status: "Completed",
+      images: ["/saivihar-1.jpeg"],
     },
     {
-      id: "shreekhtera-vihar-1",
-      name: "Shreekhtera Vihar 1",
+      id: "shreekhetra-vihar-1",
+      name: "Shreekhetra Vihar 1",
       headline: "Exclusive Residential Plots",
-      location: "Bhubaneswar, Odisha",
-      status: "Ready to Move",
-      images: [
-        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      ],
+      location: "Bhubaneswar-Puri NH",
+      status: "Completed",
+      images: ["/Shreeketravihar-1-3.jpeg"],
     },
     {
       id: "shreekhtera-vihar-2",
-      name: "Shreekhtera Vihar 2",
+      name: "Shreekhetra Vihar 2",
       headline: "Modern Residential Plots",
-      location: "Bhubaneswar, Odisha",
-      status: "Under Construction",
-      images: [
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80",
-      ],
+      location: "Nirmala, Mangalpur",
+      status: "Completed",
+      images: ["/Shreeketravihar-2-4.jpeg"],
     },
   ];
 
@@ -205,7 +201,7 @@ const ShreekhetraVihar3 = () => {
                     className="bg-red-700 cursor-pointer hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-lg flex items-center transition duration-300 font-exo shadow-md"
                   >
                     <MapPin className="w-5 h-5 mr-2" />
-                    View Map
+                    View in Map
                   </button>
                 </div>
               </motion.div>
@@ -217,7 +213,7 @@ const ShreekhetraVihar3 = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
+                <h2 className="text-3xl font-bold text-red-600 mb-6 font-exo relative text-center">
                   About {project.name}
                   <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700"></div>
                 </h2>
@@ -233,6 +229,18 @@ const ShreekhetraVihar3 = () => {
                     {paragraph}
                   </p>
                 ))}
+                {project.distances && (
+                  <div className="mt-6">
+                    <h3 className="text-xl font-semibold text-red-600 mb-3 font-exo">
+                      Key Distances
+                    </h3>
+                    <ul className="list-disc pl-6 text-gray-700 font-exo space-y-1">
+                      {project.distances.map((d, i) => (
+                        <li key={i}>{d}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </motion.div>
 
               {/* Amenities */}
@@ -300,11 +308,16 @@ const ShreekhetraVihar3 = () => {
                     </p>
                   </div>
                   <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md">
-                    <img
-                      src={project.locationMap}
-                      alt={`Map of ${project.name}`}
-                      className="w-full h-full object-cover"
-                    />
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3083.8603498817115!2d85.833429!3d20.072385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDA0JzIwLjYiTiA4NcKwNTAnMDAuMyJF!5e1!3m2!1sen!2sin!4v1759847180776!5m2!1sen!2sin"
+                      width="600"
+                      height="450"
+                      style={{ border: 0 }}
+                      className="w-full h-full rounded-lg"
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
                   </div>
                 </div>
               </motion.div>
@@ -455,12 +468,10 @@ const ShreekhetraVihar3 = () => {
                     <MapPin className="w-4 h-4 mr-1 text-red-700" />
                     <span className="text-sm font-exo">{item.location}</span>
                   </div>
-                  <p className="text-gray-600 mb-4 line-clamp-2 font-exo">
-                    {item.headline}
-                  </p>
+                 
                   <Link
                     to={`/projects/${item.id}`}
-                    className="block w-full bg-red-700 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-center transition duration-300 font-exo"
+                    className="block w-full bg-red-700 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg text-center transition duration-300 font-exo"
                   >
                     View Details
                   </Link>

@@ -8,6 +8,7 @@ import ShreekhetraVihar1 from "./Pages/Projects/ShreekhetraVihar1";
 import ShreekhetraVihar2 from "./Pages/Projects/ShreekhetraVihar2";
 import ShreekhetraVihar3 from "./Pages/Projects/ShreekhetraVihar3";
 import ShreekhetraVihar4 from "./Pages/Projects/ShreekhetraVihar4";
+import SaiVihar from "./Pages/Projects/SaiVihar";
 import "./index.css";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           path="/projects/shreekhetra-vihar-3"
           element={<ShreekhetraVihar3 />}
         />
+        <Route path="/projects/sai-vihar" element={<SaiVihar />} />
       </Routes>
     </BrowserRouter>
   );

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 // Imports for Framer Motion
 import { motion, AnimatePresence } from "framer-motion";
 import { BiSupport } from "react-icons/bi";
+import { MdOutlineMail } from "react-icons/md";
+import { IoIosCall } from "react-icons/io";
+
 import {
   Menu,
   X,
@@ -28,12 +31,13 @@ const Navbar = () => {
         setScrolled(isScrolled);
       }
     };
-    
+
     // Initial check
     handleScroll();
-    
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll, { passive: true });
+    return () =>
+      window.removeEventListener("scroll", handleScroll, { passive: true });
   }, [scrolled]);
 
   const menuItems = [
@@ -91,9 +95,7 @@ const Navbar = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled 
-            ? "bg-white shadow-md" 
-            : "bg-black/30 backdrop-blur-sm"
+          scrolled ? "bg-white shadow-md" : "bg-black/30 backdrop-blur-sm"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -107,9 +109,13 @@ const Navbar = () => {
             >
               <NavLink to="/" className="flex items-center">
                 <img src="/logo.png" alt="Logo" className="h-10 w-auto mr-3" />
-                <h1 className={`text-2xl font-bold font-exo ${
-                  scrolled ? "text-gray-900 hover:text-red-700" : "text-white hover:text-gray-200"
-                }`}>
+                <h1
+                  className={`text-2xl font-bold font-exo ${
+                    scrolled
+                      ? "text-gray-900 hover:text-red-700"
+                      : "text-white hover:text-gray-200"
+                  }`}
+                >
                   Seasand Properties
                 </h1>
               </NavLink>
@@ -166,8 +172,8 @@ const Navbar = () => {
                 <NavLink
                   to="/contact"
                   className={`hidden md:flex items-center px-6 py-3 rounded-md font-semibold text-base transition-all duration-300 font-exo ${
-                    scrolled 
-                      ? "bg-red-700 hover:bg-red-800 text-white" 
+                    scrolled
+                      ? "bg-red-700 hover:bg-red-800 text-white"
                       : "bg-red-700 hover:bg-white/30 text-white border border-white/30"
                   }`}
                 >
@@ -194,7 +200,11 @@ const Navbar = () => {
                         transition={{ duration: 0.3 }}
                         className="absolute inset-0 flex items-center justify-center"
                       >
-                        <X className={`w-6 h-6 ${scrolled ? "text-black" : "text-white"}`} />
+                        <X
+                          className={`w-6 h-6 ${
+                            scrolled ? "text-black" : "text-white"
+                          }`}
+                        />
                       </motion.div>
                     ) : (
                       <motion.div
@@ -205,7 +215,11 @@ const Navbar = () => {
                         transition={{ duration: 0.3 }}
                         className="absolute inset-0 flex items-center justify-center"
                       >
-                        <Menu className={`w-6 h-6 ${scrolled ? "text-black" : "text-white"}`} />
+                        <Menu
+                          className={`w-6 h-6 ${
+                            scrolled ? "text-black" : "text-white"
+                          }`}
+                        />
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -214,72 +228,50 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+      </motion.nav>
 
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              variants={mobileMenuVariants}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              className="lg:hidden fixed inset-0 bg-white z-[100] flex flex-col"
-            >
-              <div className="flex justify-between items-center h-20 px-4 border-b border-gray-200">
-                <NavLink
-                  to="/"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center"
-                >
-                  <img src="/logo.png" alt="Logo" className="h-8 w-auto mr-2" />
-                  <h1 className="text-xl font-bold text-gray-900 hover:text-red-700 font-exo">
-                    Seasand Properties
-                  </h1>
-                </NavLink>
-                <button
-                  onClick={toggleMenu}
-                  className="p-2 rounded-lg text-gray-800 hover:bg-gray-100 transition-colors duration-200"
-                >
-                  <X className="w-7 h-7" />
-                </button>
-              </div>
+      {/* Mobile Menu - Now always has bg-white regardless of scroll state */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            variants={mobileMenuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="lg:hidden fixed inset-0 bg-white z-[100] flex flex-col"
+          >
+            <div className="flex justify-between items-center h-20 px-4 border-b border-gray-200 bg-white">
+              <NavLink
+                to="/"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center"
+              >
+                <img src="/logo.png" alt="Logo" className="h-8 w-auto mr-2" />
+                <h1 className="text-xl font-bold text-gray-900 hover:text-red-700 font-exo">
+                  Seasand Properties
+                </h1>
+              </NavLink>
+              <button
+                onClick={toggleMenu}
+                className="p-2 rounded-lg text-gray-800 hover:bg-gray-100 transition-colors duration-200"
+              >
+                <X className="w-7 h-7" />
+              </button>
+            </div>
 
-              <div className="flex-grow flex flex-col justify-center items-center">
-                <ul className="space-y-6 text-center">
-                  {menuItems.map((item, index) => (
-                    <motion.li
-                      key={item.name}
-                      custom={index}
-                      variants={mobileLinkVariants}
-                      initial="hidden"
-                      animate="visible"
-                      exit="hidden"
-                    >
-                      <NavLink
-                        to={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className={({ isActive }) =>
-                          `flex items-center text-2xl font-semibold transition-colors duration-300 font-exo ${
-                            isActive
-                              ? "text-red-700"
-                              : "text-gray-800 hover:text-blue-500"
-                          }`
-                        }
-                      >
-                        {item.icon}
-                        <span>{item.name}</span>
-                      </NavLink>
-                    </motion.li>
-                  ))}
+            <div className="flex-grow flex flex-col justify-center items-center bg-white">
+              <ul className="space-y-6 text-center">
+                {menuItems.map((item, index) => (
                   <motion.li
-                    custom={menuItems.length}
+                    key={item.name}
+                    custom={index}
                     variants={mobileLinkVariants}
                     initial="hidden"
                     animate="visible"
                     exit="hidden"
                   >
                     <NavLink
-                      to="/contact"
+                      to={item.href}
                       onClick={() => setIsOpen(false)}
                       className={({ isActive }) =>
                         `flex items-center text-2xl font-semibold transition-colors duration-300 font-exo ${
@@ -289,52 +281,75 @@ const Navbar = () => {
                         }`
                       }
                     >
-                      <Phone className="w-5 h-5 mr-3" />
-                      <span>Contact</span>
+                      {item.icon}
+                      <span>{item.name}</span>
                     </NavLink>
                   </motion.li>
-                </ul>
-              </div>
+                ))}
+                <motion.li
+                  custom={menuItems.length}
+                  variants={mobileLinkVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                >
+                  <NavLink
+                    to="/contact"
+                    onClick={() => setIsOpen(false)}
+                    className={({ isActive }) =>
+                      `flex items-center text-2xl font-semibold transition-colors duration-300 font-exo ${
+                        isActive
+                          ? "text-red-700"
+                          : "text-gray-800 hover:text-blue-500"
+                      }`
+                    }
+                  >
+                    <Phone className="w-5 h-5 mr-3" />
+                    <span>Contact</span>
+                  </NavLink>
+                </motion.li>
+              </ul>
+            </div>
 
-              <div className="py-8 px-4 border-t border-gray-200">
-                <div className="flex justify-center space-x-6">
-                  <motion.a
-                    href="#"
-                    whileHover={{ scale: 1.2, y: -3 }}
-                    className="text-gray-500 hover:text-red-700"
-                  >
-                    <Facebook size={22} />
-                  </motion.a>
-                  <motion.a
-                    href="#"
-                    whileHover={{ scale: 1.2, y: -3 }}
-                    className="text-gray-500 hover:text-red-700"
-                  >
-                    <Twitter size={22} />
-                  </motion.a>
-                  <motion.a
-                    href="#"
-                    whileHover={{ scale: 1.2, y: -3 }}
-                    className="text-gray-500 hover:text-red-700"
-                  >
-                    <Instagram size={22} />
-                  </motion.a>
-                  <motion.a
-                    href="#"
-                    whileHover={{ scale: 1.2, y: -3 }}
-                    className="text-gray-500 hover:text-red-700"
-                  >
-                    <Linkedin size={22} />
-                  </motion.a>
-                </div>
-                <p className="text-center text-gray-500 mt-6 text-sm font-exo">
-                  © {new Date().getFullYear()} Seasand Properties
-                </p>
+            <div className="py-8 px-4 border-t border-gray-200 bg-white">
+              <div className="flex justify-center space-x-6">
+                <motion.a
+                  href="https://www.facebook.com/share/16qK3Qbchh/"
+                  whileHover={{ scale: 1.2, y: -3 }}
+                  className="text-gray-500 hover:text-red-700"
+                >
+                  <Facebook size={22} />
+                </motion.a>
+              
+                <motion.a
+                  href="https://www.instagram.com/seasandpropertiespvt.ltd?igsh=MW11NHc3bWIwdmlwbg=="
+                  whileHover={{ scale: 1.2, y: -3 }}
+                  className="text-gray-500 hover:text-red-700"
+                >
+                  <Instagram size={22} />
+                </motion.a>
+                <motion.a
+                  href="mailto:seasandpropertiespvtltd@gmail.com"
+                  whileHover={{ scale: 1.2, y: -3 }}
+                  className="text-gray-500 hover:text-red-700"
+                >
+                  <MdOutlineMail size={22} />
+                </motion.a>
+                <motion.a
+                  href="tel:+918763481848"
+                  whileHover={{ scale: 1.2, y: -3 }}
+                  className="text-gray-500 hover:text-red-700"
+                >
+                  <IoIosCall size={22} />
+                </motion.a>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.nav>
+              <p className="text-center text-gray-500 mt-6 text-sm font-exo">
+                © {new Date().getFullYear()} Seasand Properties
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Spacer to prevent content overlap */}
       <div className="h-20" />

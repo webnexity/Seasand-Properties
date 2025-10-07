@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import { MdOutlineMail } from "react-icons/md";
 
@@ -21,6 +21,117 @@ import {
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  // Refs for scroll animations
+  const companyInfoRef = useRef(null);
+  const quickLinksRef = useRef(null);
+  const contactInfoRef = useRef(null);
+  const bottomBarRef = useRef(null);
+
+  // Check if sections are in view
+  const companyInfoInView = useInView(companyInfoRef, {
+    once: true,
+    threshold: 0.1,
+  });
+  const quickLinksInView = useInView(quickLinksRef, {
+    once: true,
+    threshold: 0.1,
+  });
+  const contactInfoInView = useInView(contactInfoRef, {
+    once: true,
+    threshold: 0.1,
+  });
+  const bottomBarInView = useInView(bottomBarRef, {
+    once: true,
+    threshold: 0.1,
+  });
+
+  // Animation controls
+  const companyInfoControls = useAnimation();
+  const quickLinksControls = useAnimation();
+  const contactInfoControls = useAnimation();
+  const bottomBarControls = useAnimation();
+
+  // Trigger animations when sections come into view
+  useEffect(() => {
+    if (companyInfoInView) companyInfoControls.start("visible");
+    if (quickLinksInView) quickLinksControls.start("visible");
+    if (contactInfoInView) contactInfoControls.start("visible");
+    if (bottomBarInView) bottomBarControls.start("visible");
+  }, [
+    companyInfoInView,
+    quickLinksInView,
+    contactInfoInView,
+    bottomBarInView,
+    companyInfoControls,
+    quickLinksControls,
+    contactInfoControls,
+    bottomBarControls,
+  ]);
+
+  // Animation variants
+  const companyInfoVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
+
+  const quickLinksVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut",
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const linkItemVariants = {
+    hidden: { opacity: 0, x: -10 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  const contactInfoVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut",
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const contactItemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  const bottomBarVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.7, delay: 0.5 },
+    },
+  };
+
   // Animation variants
   const linkHover = {
     hover: { x: 5, transition: { duration: 0.2 } },
@@ -36,10 +147,20 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Company Info */}
-          <div className="md:pr-8">
+          <motion.div
+            ref={companyInfoRef}
+            initial="hidden"
+            animate={companyInfoControls}
+            variants={companyInfoVariants}
+            className="md:pr-8"
+          >
             <div className="flex items-center mb-6">
               <div className="w-10 h-10 rounded-md flex items-center justify-center mr-3">
-                <img className="w-10 h-6" src="/logo.png" alt="Seasand Properties" />
+                <img
+                  className="w-10 h-6"
+                  src="/logo.png"
+                  alt="Seasand Properties"
+                />
               </div>
               <h3 className="text-xl font-bold text-white font-exo">
                 Seasand Properties
@@ -61,7 +182,7 @@ const Footer = () => {
               >
                 <Facebook className="w-4 h-4 text-white" />
               </motion.a>
-             
+
               <motion.a
                 href="https://www.instagram.com/seasandpropertiespvt.ltd?igsh=MW11NHc3bWIwdmlwbg=="
                 target="_blank"
@@ -82,13 +203,17 @@ const Footer = () => {
               >
                 <MdOutlineMail className="w-4 h-4 text-white" />
               </motion.a>
-
-             
             </div>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div className="md:px-4">
+          <motion.div
+            ref={quickLinksRef}
+            initial="hidden"
+            animate={quickLinksControls}
+            variants={quickLinksVariants}
+            className="md:px-4"
+          >
             <h3 className="text-lg font-bold text-white mb-6 font-exo">
               Quick Links
             </h3>
@@ -101,7 +226,11 @@ const Footer = () => {
                 "Services",
                 "Contact Us",
               ].map((item) => (
-                <motion.li key={item} whileHover="hover">
+                <motion.li
+                  key={item}
+                  whileHover="hover"
+                  variants={linkItemVariants}
+                >
                   <motion.a
                     href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
                     className="flex items-center text-gray-400 hover:text-red-800 transition-colors duration-300 font-exo"
@@ -113,15 +242,21 @@ const Footer = () => {
                 </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact Information */}
-          <div className="md:pl-4">
+          <motion.div
+            ref={contactInfoRef}
+            initial="hidden"
+            animate={contactInfoControls}
+            variants={contactInfoVariants}
+            className="md:pl-4"
+          >
             <h3 className="text-lg font-bold text-white mb-6 font-exo">
               Contact Info
             </h3>
             <ul className="space-y-4">
-              <li>
+              <motion.li variants={contactItemVariants}>
                 <motion.a
                   href="https://goo.gl/maps/your-address"
                   target="_blank"
@@ -131,15 +266,15 @@ const Footer = () => {
                 >
                   <MapPin className="w-5 h-5 mr-3 mt-1 flex-shrink-0" />
                   <span className="font-exo hover:text-red-800">
-                    Plot no 2132/5124,Nageshwar tangi, Lewis road, old town 
+                    Plot no 2132/5124,Nageshwar tangi, Lewis road, old town
                     <br />
                     Bhubaneswar, Odisha 751002
                     <br />
                     India
                   </span>
                 </motion.a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={contactItemVariants}>
                 <motion.a
                   href="tel:+919876543210"
                   className="flex items-center text-gray-400 hover:text-red-800 transition-colors duration-300 font-exo"
@@ -148,8 +283,8 @@ const Footer = () => {
                   <Phone className="w-5 h-5 mr-3 flex-shrink-0" />
                   0674-3588362
                 </motion.a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={contactItemVariants}>
                 <motion.a
                   href="mailto:seasandpropertiespvtltd@gmail.com"
                   className="flex items-center text-gray-400 hover:text-red-800 transition-colors duration-300 font-exo"
@@ -158,21 +293,28 @@ const Footer = () => {
                   <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
                   seasandpropertiespvtltd@gmail.com
                 </motion.a>
-              </li>
-              <li className="flex items-center text-gray-400 font-exo">
+              </motion.li>
+              <motion.li
+                variants={contactItemVariants}
+                className="flex items-center text-gray-400 font-exo"
+              >
                 <Clock className="w-5 h-5 mr-3 flex-shrink-0" />
                 Mon-Sat: 9:00 AM - 6:00 PM
-              </li>
+              </motion.li>
             </ul>
-          </div>
-
-
+          </motion.div>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
+        <motion.div
+          ref={bottomBarRef}
+          initial="hidden"
+          animate={bottomBarControls}
+          variants={bottomBarVariants}
+          className="max-w-7xl mx-auto px-6 lg:px-8 py-6"
+        >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <p className="text-gray-500 text-sm text-center md:text-left font-exo">
               © {currentYear} Seasand Properties. All rights reserved.
@@ -204,7 +346,7 @@ const Footer = () => {
               </motion.a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

@@ -10,7 +10,7 @@ const Contact = () => {
     phone: "0674-3588362",
     email: "seasandpropertiespvtltd@gmail.com",
     address: "Plot no 2132/5124, Nageshwar tangi, Lewis road, old town, Bhubaneswar, 751002",
-    googleFormLink: "https://docs.google.com/forms/d/e/1FAIpQLSc..." // Replace with actual Google Form link
+    googleFormLink: "https://docs.google.com/forms/d/1ER83ckItBxWPAFbEHKKqqJlP0sD7IDLOL_1ligszmYw/viewform?edit_requested=true" // Replace with actual Google Form link
   };
 
   const containerVariants = {

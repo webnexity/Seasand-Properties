@@ -25,39 +25,44 @@ const ShreekhetraVihar2 = () => {
   const project = {
     id: "shreekhtera-vihar-2",
     name: "Shreekhtera Vihar 2",
-    headline: "Modern Residential Plots with Premium Amenities",
+    headline: "Ready to Move Mega Plotting Project at Nirmala, Mangalpur",
     description:
-      "Shreekhtera Vihar 2 offers premium residential plots with excellent connectivity and modern amenities in Bhubaneswar. Located in a serene environment, these plots provide the perfect foundation for your dream home.",
+      "Shreekhetra Vihar 2 is a ready to move, highly developed mega plotting project at Nirmala, Mangalpur near Bhubaneswar–Puri NH. Spread across 4 acres, the gated community is connected by a proposed 30ft revenue black top road and planned modern infrastructure.",
     fullDescription: [
-      "Shreekhtera Vihar 2 is a prestigious residential plotting project designed for those who seek a perfect balance of modern living and natural surroundings. Located in one of Bhubaneswar's up-and-coming areas, this project combines strategic location with world-class amenities.",
-      "Each plot in Shreekhtera Vihar 2 is meticulously planned to ensure optimal utilization of space while maintaining privacy. The project features wide internal roads, beautiful landscaping, and modern infrastructure to enhance your living experience.",
-      "With easy access to major educational institutions, healthcare facilities, and commercial centers, Shreekhtera Vihar 2 offers the convenience of urban living while maintaining a peaceful residential ambiance.",
+      "This premium homestead land project offers legally compliant plots within a secure gated community featuring a master boundary wall and organized internal development.",
+      "Located close to Bhubaneswar yet in a peaceful growth corridor, it ensures excellent future appreciation with seamless road connectivity and essential facilities nearby.",
+      "Developed by a team with 10+ years of experience in residential land development across Odisha, ensuring transparency, reliability, and long‑term value.",
+    ],
+    distances: [
+      "1 KM from NH",
+      "27 KM from Bhubaneswar",
+      "2 KM from Mangalpur Market & Medical",
+      "3 KM from Satasankha Market",
+      "28 KM from Jagannath Temple",
     ],
     location: "Bhubaneswar, Odisha",
     locationDetails:
       "Located in Bhubaneswar with excellent connectivity, just 4 km from Nandankanan Road, 6 km from Patia, and 9 km from city center with direct access to NH-16.",
-    status: "Under Construction",
-    price: "Starting from ₹15 lakhs",
-    availability: "Limited Plots Available",
+    status: "Completed",
+    price: "Very Competative price",
+    availability: "Sold Out",
     totalUnits: "65 Plots",
-    availableUnits: "15 Plots",
+    
     possessionDate: "December 2025",
     plotSizes: ["1500 sq.ft", "1800 sq.ft", "2200 sq.ft", "3000 sq.ft"],
-        amenities: [
-      "24/7 Security",
-      "Landscaped Gardens",
-      "Children's Play Area",
-      "Wide Internal Roads",
-      "Underground Electrical Wiring",
-      "Street Lights",
-      "Water Supply System",
-      "Clubhouse",
-      "Jogging Track",
-      "Community Hall",
+    amenities: [
+      "Homestead Land",
+      "30ft Developed Road",
+      "Master Boundary Wall",
+      "Electrification Facility",
+      "Gated Community",
+      "Security Facility",
+      "Plantation",
     ],
     contactPhone: "0674-3588362",
     contactEmail: "seasandpropertiespvtltd@gmail.com",
-    contactAddress: "Plot no 2132/5124,Nageshwar tangi, Lewis road, old town ,Bhubaneswar, 751002",
+    contactAddress:
+      "Plot no 2132/5124,Nageshwar tangi, Lewis road, old town ,Bhubaneswar, 751002",
     images: [
       "/Shreeketravihar-2-8.jpeg",
       "/Shreeketravihar-2-7.jpeg",
@@ -70,7 +75,7 @@ const ShreekhetraVihar2 = () => {
       "/Shreeketravihar-2-map2.jpeg",
     ],
     locationMap:
-      "https://maps.googleapis.com/maps/api/staticmap?center=Bhubaneswar,Odisha&zoom=14&size=600x300&key=YOUR_API_KEY",
+      "https://www.google.com/maps/place/20.027858,85.836734/data=!4m6!3m5!1s0!7e2!8m2!3d20.0278584!4d85.8367335?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI1LjM3LjAYACD67A0qkAEsOTQyNjc3MjcsOTQyODQ0OTMsOTQyMjMyOTksOTQyMTY0MTMsOTQyODA1NzYsOTQyMTI0OTYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTc1MjMsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsNDcwODQzOTMsOTQyMTMyMDAsOTQyNTgzMjVCAklO&skid=292da8be-08d1-4f27-bac0-c3da43d03548&g_st=aw",
   };
 
   // Similar projects data
@@ -203,7 +208,7 @@ const ShreekhetraVihar2 = () => {
                     className="bg-red-700 cursor-pointer hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-lg flex items-center transition duration-300 font-exo shadow-md"
                   >
                     <MapPin className="w-5 h-5 mr-2" />
-                    View Map
+                    View in Map
                   </button>
                 </div>
               </motion.div>
@@ -215,7 +220,7 @@ const ShreekhetraVihar2 = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
+                <h2 className="text-3xl font-bold text-red-600 mb-6 font-exo relative text-center">
                   About {project.name}
                   <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700"></div>
                 </h2>
@@ -231,6 +236,18 @@ const ShreekhetraVihar2 = () => {
                     {paragraph}
                   </p>
                 ))}
+                {project.distances && (
+                  <div className="mt-6">
+                    <h3 className="text-xl bold text-red-600 font-semibold  mb-3 font-exo">
+                      Key Distances
+                    </h3>
+                    <ul className="list-disc pl-6 text-gray-700 font-exo space-y-1">
+                      {project.distances.map((d, i) => (
+                        <li key={i}>{d}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </motion.div>
 
               {/* Amenities */}
@@ -299,11 +316,16 @@ const ShreekhetraVihar2 = () => {
                     </p>
                   </div>
                   <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md">
-                    <img
-                      src={project.locationMap}
-                      alt={`Map of ${project.name}`}
-                      className="w-full h-full object-cover"
-                    />
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3084.735139949028!2d85.83673399999999!3d20.027857999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDAxJzQwLjMiTiA4NcKwNTAnMTIuMiJF!5e1!3m2!1sen!2sin!4v1759845898650!5m2!1sen!2sin"
+                      width="600"
+                      height="450"
+                      style={{ border: 0 }}
+                      className="w-full h-full rounded-lg"
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
                   </div>
                 </div>
               </motion.div>
@@ -387,14 +409,7 @@ const ShreekhetraVihar2 = () => {
                       {project.totalUnits}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
-                    <span className="text-gray-700 font-exo">
-                      Available Units
-                    </span>
-                    <span className="text-gray-900 font-semibold font-exo">
-                      {project.availableUnits}
-                    </span>
-                  </div>
+                  
                   <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
                     <span className="text-gray-700 font-exo">
                       Project Status
@@ -454,9 +469,7 @@ const ShreekhetraVihar2 = () => {
                     <MapPin className="w-4 h-4 mr-1 text-red-700" />
                     <span className="text-sm font-exo">{item.location}</span>
                   </div>
-                  <p className="text-gray-600 mb-4 line-clamp-2 font-exo">
-                    {item.headline}
-                  </p>
+                 
                   <Link
                     to={`/projects/${item.id}`}
                     className="block w-full bg-red-700 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-center transition duration-300 font-exo"

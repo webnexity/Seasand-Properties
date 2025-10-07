@@ -16,6 +16,19 @@ import {
 
 const upcomingProjects = [
   {
+    name: "Sai Vihar",
+    slug: "sai-vihar",
+    image: "/saivihar-1.jpeg",
+    location: "Near Puri",
+    description:
+      "A serene and peaceful environment, perfect for building a family home away from the city hustle.",
+    keyDistances: [
+      "8kms from Puri Railway Station",
+      "Near proposed medical college",
+    ],
+    amenities: ["Boundary Wall", "Security Facility", "Electricity system"],
+  },
+  {
     name: "Shreekhetra Vihar - 1",
     slug: "shreekhetra-vihar-1",
     image: "/Shreeketravihar-1-6.jpeg",
@@ -42,10 +55,10 @@ const upcomingProjects = [
       "Near proposed medical college",
     ],
     amenities: [
-      "Community Hall",
-      "Children's play area",
-      "Drainage system",
-      "Water supply",
+      "Homestead Land",
+      "30ft Developed Road",
+      "Security Facility",
+      
     ],
   },
   {
@@ -155,7 +168,7 @@ const Projects = () => {
         <div
           className="relative h-[50vh] bg-cover bg-center bg-fixed"
           style={{
-            backgroundImage: "url('/projects_hero.jpg')",
+            backgroundImage: "url('/project-hero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-black/60"></div>
@@ -375,7 +388,7 @@ const Projects = () => {
               className="absolute inset-0 opacity-20 z-0"
               style={{
                 backgroundImage:
-                  "url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+                  "url('https://tse2.mm.bing.net/th/id/OIP.YjHu6yDARd4dvncqydcg0gHaEo?pid=Api&P=0&h=180')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

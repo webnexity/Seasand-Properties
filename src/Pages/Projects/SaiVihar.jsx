@@ -1,112 +1,220 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { BiSupport } from "react-icons/bi";
+import { motion, useInView, useAnimation } from "framer-motion";
 import {
   ArrowLeft,
   MapPin,
   CheckCircle,
   Clock,
+  Home,
   Phone,
   Mail,
   Tag,
   Users,
 } from "lucide-react";
 
-const ShreekhetraVihar1New = () => {
+const SaiVihar = () => {
   const [activeImage, setActiveImage] = useState(0);
 
-  // Scroll to top on component mount
+  // Refs for scroll animations
+  const galleryRef = useRef(null);
+  const aboutRef = useRef(null);
+  const amenitiesRef = useRef(null);
+  const plotSizesRef = useRef(null);
+  const locationRef = useRef(null);
+
+  // Check if sections are in view
+  const galleryInView = useInView(galleryRef, { once: true, threshold: 0.2 });
+  const aboutInView = useInView(aboutRef, { once: true, threshold: 0.2 });
+  const amenitiesInView = useInView(amenitiesRef, {
+    once: true,
+    threshold: 0.2,
+  });
+  const plotSizesInView = useInView(plotSizesRef, {
+    once: true,
+    threshold: 0.2,
+  });
+  const locationInView = useInView(locationRef, { once: true, threshold: 0.2 });
+
+  // Animation controls
+  const galleryControls = useAnimation();
+  const aboutControls = useAnimation();
+  const amenitiesControls = useAnimation();
+  const plotSizesControls = useAnimation();
+  const locationControls = useAnimation();
+
+  // Trigger animations when sections come into view
+  useEffect(() => {
+    if (galleryInView) galleryControls.start("visible");
+    if (aboutInView) aboutControls.start("visible");
+    if (amenitiesInView) amenitiesControls.start("visible");
+    if (plotSizesInView) plotSizesControls.start("visible");
+    if (locationInView) locationControls.start("visible");
+  }, [
+    galleryInView,
+    aboutInView,
+    amenitiesInView,
+    plotSizesInView,
+    locationInView,
+    galleryControls,
+    aboutControls,
+    amenitiesControls,
+    plotSizesControls,
+    locationControls,
+  ]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Project Data
-  const project = {
-    id: "shreekhetra-vihar-1",
-    name: "Shreekhetra Vihar 1",
-    headline: "Exclusive Residential Plots in Prime Location",
-    description:
-      "Shreekhetra Vihar 1 offers exclusive residential plots with world-class amenities and exceptional connectivity in Bhubaneswar. Located in a prime area, these plots are designed for those who seek comfort, luxury, and convenience.",
-    fullDescription: [
-      "Shreekhetra Vihar 1 is a premium residential plotting project that represents the epitome of luxury living in Bhubaneswar. Set in one of the city's most sought-after locations, this project brings together strategic positioning with world-class amenities to create an unparalleled living experience.",
-      "Each plot in Shreekhetra Vihar 1 is carefully designed to optimize space and ensure privacy while providing ample room for creativity in home design. The project features expansive internal roads, beautifully landscaped green spaces, and cutting-edge infrastructure that enhances your lifestyle.",
-      "With easy access to major educational institutions, healthcare facilities, shopping centers, and entertainment hubs, Shreekhtera Vihar 1 offers the perfect blend of urban connectivity and peaceful residential living.",
-    ],
-    location: "Bhubaneswar-puri NH",
-    locationDetails:
-      "Strategically located in Bhubaneswar-puri NH, just 200 meters from NH, 27 km from Bhubaneswar, and 2km from satasankha market",
-    status: "Ready to start",
-    price: "Very competative price",
-    availability: "Few Plots Left",
-    totalUnits: "103 Plots",
+  // Animation variants
+  const galleryVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
-    possessionDate: "Ready to Move",
-    plotSizes: ["1500 sq.ft", "1800 sq.ft", "2200 sq.ft", "3000 sq.ft"],
+  const aboutVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const amenitiesVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.05 },
+    },
+  };
+
+  const amenityItemVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.4 },
+    },
+  };
+
+  const plotSizesVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { delayChildren: 0.2, staggerChildren: 0.1 },
+    },
+  };
+
+  const plotSizeItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  const locationVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.7 },
+    },
+  };
+
+  const project = {
+    id: "sai-vihar",
+    name: "Sai Vihar",
+    headline: "A Mega Residential Plotting Project",
+    description:
+      "Sai Vihar is a ready to move mega plotting project located at Jagannathpur, Bhubaneswar. Total project area is 5 Acres. The gated community is well connected by a proposed 30ft Revenue Black Top Road.",
+    fullDescription: [
+      "This premium homestead land development offers secure, legally compliant plots within a planned gated community featuring master boundary development and internal infrastructure.",
+      "Designed to provide long‑term value, Sai Vihar combines strategic connectivity with a peaceful residential environment close to educational, spiritual and civic landmarks.",
+      "We are having 10+ years of experience in developing residential land projects across Bhubaneswar and have gained the trust of 1000+ clients across Odisha.",
+    ],
+    distances: [
+      "14 KM from Kalpana Square",
+      "12 KM from Ravi Talkies Square",
+      "10 KM from Sai Temple, Tankapani Road",
+      "5 KM from BJEM - II, Rangabazar",
+    ],
+    location: "Jagannathpur, Bhubaneswar",
+    locationDetails:
+      "Situated at Jagannathpur, Bhubaneswar with smooth approach via proposed 30ft revenue black top road; rapid access to major city junctions and civic infrastructure.",
+    status: "Completed",
+    price: "Competitive Pricing",
+    availability: "Few Plots Available",
+    totalUnits: "84 Plots",
+    availableUnits: "Limited Inventory",
+    possessionDate: "Ready to move",
+    plotSizes: ["1500 sq.ft", "1800 sq.ft", "2000 sq.ft", "2000+ sq.ft"],
     amenities: [
-      "Home-Stead Land",
-      "30ft. Developed Road",
-      "Master Boundary Wall",
-      "Security Facility",
-      "Electrical facility",
-      "Temple",
-      "Park",
+      "Home Stead Land",
       "Gated Community",
-      "Open space",
+      "Security Facility",
+      "Master Boundary Wall",
+      "Electricity System",
+      "Entrance Gate",
       "Plantation",
     ],
     contactPhone: "0674-3588362",
     contactEmail: "seasandpropertiespvtltd@gmail.com",
     contactAddress:
-      "Plot no 2132/5124,Nageshwar tangi, Lewis road, old town ,Bhubaneswar, 751002",
+      "Plot no 2132/5124, Nageshwar Tangi, Lewis Road, Old Town, Bhubaneswar, 751002",
     images: [
-      "/Shreeketravihar-1-3.jpeg",
-      "/Shreeketravihar-1-4.jpeg",
-      "/Shreeketravihar-1-5.jpeg",
-      "/Shreeketravihar-1-6.jpeg",
-      "/Shreeketravihar-1-map1.jpeg",
-      "/Shreeketravihar-1-map2.jpeg",
+      // Update filenames to match actual public folder image names
+      "/saivihar-1.jpeg",
+      "/saivihar-2.jpeg",
+      "/saivihar-5.jpeg",
+      "/saivihar-3.jpeg",
+
+      "/saivihar-4.jpeg",
     ],
-    locationMap:
-      "https://www.google.com/maps/place/20%C2%B001'16.9%22N+85%C2%B049'20.8%22E/@20.021361,85.822453,708m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d20.021361!4d85.822453?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D",
+    locationMap: "https://maps.app.goo.gl/9a7mYfbWLMUEqopRA", // Replace with precise map URL if available
   };
 
-  // Similar projects data
   const similarProjects = [
     {
-      id: "shreekhetra-vihar-2",
-      name: "Shreekhetra Vihar Phase 2",
+      id: "shreekhetra-vihar-1",
+      name: "Shreekhetra Vihar Phase 1",
       headline: "Premium Residential Plots",
-      location: "Nirmala, Mangalapur , Bhubaneswar-Puri NH",
+      location: "Cutttack-Puri Bypass",
+      status: "Completed",
+      images: ["/Shreeketravihar-1-3.jpeg"],
+    },
+    {
+      id: "shreekhtera-vihar-2",
+      name: "Shreekhetra Vihar Phase 2",
+      headline: "Ready to Move Plotting",
+      location: "Nirmala, Mangalpur, Cutttack-Puri Bypass",
       status: "Completed",
       images: ["/Shreeketravihar-2-4.jpeg"],
     },
     {
       id: "shreekhetra-vihar-3",
       name: "Shreekhetra Vihar Phase 3",
-      headline: "Luxury Residential Plots",
-      location: "Pipili Square , Puri",
+      headline: "Ready to Move Plotting",
+      location: "Cuttack-Puri Bypass",
       status: "Completed",
       images: ["/Shreekhetravihar-3-3.jpeg"],
-    },
-    {
-      id: "sai-vihar",
-      name: "Sai Vihar",
-      headline: "Premium Residential Plots",
-      location: "Jagannathpur, Bhubaneswar",
-      status: "Completed",
-      images: ["/saivihar-1.jpeg"],
     },
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+      {/* Hero */}
       <div
         className="relative h-[50vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${project.images[0]})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         <div className="container mx-auto px-4 h-full flex flex-col justify-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -130,7 +238,6 @@ const ShreekhetraVihar1New = () => {
               <MapPin className="w-5 h-5 mr-2 text-blue-400" />
               <span className="text-lg font-exo">{project.location}</span>
             </div>
-
             <div className="flex flex-wrap gap-4 mt-6">
               <span className="bg-red-700 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                 <Clock className="w-4 h-4 mr-2" />
@@ -149,17 +256,19 @@ const ShreekhetraVihar1New = () => {
         </div>
       </div>
 
+      {/* Main */}
       <main className="py-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-row-12 gap-12">
-            {/* Main Content */}
+            {/* Left */}
             <div className="lg:col-span-8 mx-auto lg:mx-0">
               {/* Gallery */}
               <motion.div
+                ref={galleryRef}
+                initial="hidden"
+                animate={galleryControls}
+                variants={galleryVariants}
                 className="mb-12"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
               >
                 <div className="rounded-xl overflow-hidden shadow-2xl mb-4 h-[400px]">
                   <img
@@ -189,10 +298,8 @@ const ShreekhetraVihar1New = () => {
                 </div>
                 <div className="flex justify-center mt-6">
                   <button
-                    onClick={() =>
-                      window.open(`${project.locationMap}`, "_blank")
-                    }
-                    className="bg-red-700 cursor-pointer hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-lg flex items-center transition duration-300 font-exo shadow-md"
+                    onClick={() => window.open(project.locationMap, "_blank")}
+                    className="bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-lg flex items-center transition duration-300 font-exo shadow-md"
                   >
                     <MapPin className="w-5 h-5 mr-2" />
                     View in Map
@@ -200,211 +307,109 @@ const ShreekhetraVihar1New = () => {
                 </div>
               </motion.div>
 
-              {/* About Section */}
+              {/* About */}
               <motion.div
+                ref={aboutRef}
+                initial="hidden"
+                animate={aboutControls}
+                variants={aboutVariants}
                 className="mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
               >
                 <h2 className="text-3xl font-bold text-red-600 mb-6 font-exo relative text-center">
                   About {project.name}
-                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700" />
                 </h2>
-                <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-xl shadow-sm mb-6 border-l-4 border-blue-500">
-                  <p className="text-gray-700 leading-relaxed font-exo text-lg">
-                    <span className="font-semibold text-blue-800">
-                      Shreekhetra Vihar
-                    </span>{" "}
-                    is a prestigious ready-to-move mega plotting project
-                    spanning across{" "}
-                    <span className="font-semibold">6 acres</span> of prime land
-                    at Mangalpur, Bhubaneswar. This thoughtfully designed gated
-                    community offers a perfect blend of modern amenities and
-                    natural surroundings, creating an ideal environment for your
-                    dream home. The property enjoys excellent connectivity via
-                    the proposed{" "}
-                    <span className="font-semibold">
-                      30ft Revenue Black Top Road
-                    </span>
-                    , ensuring convenient access to all essential destinations.
+                <p className="text-gray-700 leading-relaxed font-exo mb-6">
+                  {project.description}
+                </p>
+                {project.fullDescription.map((p, i) => (
+                  <p
+                    key={i}
+                    className="text-gray-700 leading-relaxed font-exo mb-4"
+                  >
+                    {p}
                   </p>
-                </div>
-
-                <div className="bg-blue-50 rounded-xl p-6 shadow-lg mb-6 border border-blue-100">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4 font-exo border-b pb-2 border-blue-200">
-                    Strategic Location Advantages
+                ))}
+                <div className="mt-6">
+                  <h3 className="text-xl font-semibold text-red-600 mb-3 font-exo">
+                    Key Distances
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-3 border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <MapPin className="w-6 h-6 text-red-700" />
-                      </div>
-                      <div>
-                        <p className="text-gray-500 text-sm font-exo">
-                          Distance from NH
-                        </p>
-                        <p className="text-gray-800 font-bold font-exo text-lg">
-                          200 MTR
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-3 border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <MapPin className="w-6 h-6 text-red-700" />
-                      </div>
-                      <div>
-                        <p className="text-gray-500 text-sm font-exo">
-                          Distance from Bhubaneswar
-                        </p>
-                        <p className="text-gray-800 font-bold font-exo text-lg">
-                          27 KM
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-3 border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <MapPin className="w-6 h-6 text-red-700" />
-                      </div>
-                      <div>
-                        <p className="text-gray-500 text-sm font-exo">
-                          Mangalpur Market & Medical
-                        </p>
-                        <p className="text-gray-800 font-bold font-exo text-lg">
-                          20 M
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-3 border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <MapPin className="w-6 h-6 text-red-700" />
-                      </div>
-                      <div>
-                        <p className="text-gray-500 text-sm font-exo">
-                          Puri Bus Stand
-                        </p>
-                        <p className="text-gray-800 font-bold font-exo text-lg">
-                          25 KM
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="bg-white p-4 rounded-lg shadow-sm flex items-center space-x-3 border-l-4 border-blue-500 hover:shadow-md transition-shadow duration-200 md:col-span-2">
-                      <div className="bg-blue-100 p-2 rounded-full">
-                        <MapPin className="w-6 h-6 text-red-700" />
-                      </div>
-                      <div>
-                        <p className="text-gray-500 text-sm font-exo">
-                          Jagannath Temple
-                        </p>
-                        <p className="text-gray-800 font-bold font-exo text-lg">
-                          28 KM
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <ul className="list-disc pl-6 text-gray-700 font-exo space-y-1">
+                    {project.distances.map((d, i) => (
+                      <li key={i}>{d}</li>
+                    ))}
+                  </ul>
                 </div>
-
-                <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl shadow-sm mb-6 border border-green-100 flex items-center space-x-4">
-                  <div className="bg-white p-3 rounded-full shadow-md">
-                    <Users className="w-8 h-8 text-green-600" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-800 font-exo">
-                      Our Legacy of Trust
-                    </h4>
-                    <p className="text-gray-700 font-exo">
-                      With{" "}
-                      <span className="font-bold text-green-700">
-                        10+ years
-                      </span>{" "}
-                      of experience in developing premium residential land
-                      projects across Bhubaneswar, we've earned the trust of{" "}
-                      <span className="font-bold text-green-700">
-                        1000+ satisfied clients
-                      </span>{" "}
-                      throughout Odisha.
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-gray-700 leading-relaxed font-exo mb-4">
-                  Each plot in Shreekhetra Vihar 1 is carefully designed to
-                  optimize space and ensure privacy while providing ample room
-                  for creativity in home design. The project features expansive
-                  internal roads, beautifully landscaped green spaces, and
-                  cutting-edge infrastructure that enhances your lifestyle.
-                </p>
-
-                <p className="text-gray-700 leading-relaxed font-exo mb-4">
-                  With easy access to major educational institutions, healthcare
-                  facilities, shopping centers, and entertainment hubs,
-                  Shreekhetra Vihar 1 offers the perfect blend of urban
-                  connectivity and peaceful residential living.
-                </p>
               </motion.div>
+
               {/* Amenities */}
               <motion.div
+                ref={amenitiesRef}
+                initial="hidden"
+                animate={amenitiesControls}
+                variants={amenitiesVariants}
                 className="mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
               >
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Amenities & Features
-                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700" />
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-4">
                   {project.amenities.map((amenity, index) => (
-                    <div key={index} className="flex items-center">
+                    <motion.div
+                      key={index}
+                      variants={amenityItemVariants}
+                      className="flex items-center"
+                    >
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
                       <span className="text-gray-700 font-exo">{amenity}</span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
+
               {/* Plot Sizes */}
               <motion.div
+                ref={plotSizesRef}
+                initial="hidden"
+                animate={plotSizesControls}
+                variants={plotSizesVariants}
                 className="mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
               >
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Available Plot Sizes
-                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700" />
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {project.plotSizes.map((size, index) => (
-                    <div
+                    <motion.div
                       key={index}
+                      variants={plotSizeItemVariants}
                       className="bg-blue-50 border border-blue-100 rounded-lg p-4 text-center hover:bg-blue-100 transition-colors duration-300"
                     >
-                      {/* <Home className="w-8 h-8 mx-auto mb-2 text-red-700" /> */}
+                      <Home className="w-8 h-8 mx-auto mb-2 text-red-700" />
                       <span className="font-semibold text-gray-800 font-exo">
                         {size}
                       </span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
 
               {/* Location */}
               <motion.div
+                ref={locationRef}
+                initial="hidden"
+                animate={locationControls}
+                variants={locationVariants}
                 className="mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
               >
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 font-exo relative text-center">
                   Location
-                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700"></div>
+                  <div className="absolute -bottom-2 left-0 right-0 mx-auto w-32 h-1 bg-red-700" />
                 </h2>
                 <div className="bg-blue-50 rounded-xl p-6 shadow-sm">
-                  <div className="flex items-start mb-6">
+                  <div className="flex items-start mb-4">
                     <MapPin className="w-5 h-5 text-red-700 mr-3 mt-1" />
                     <p className="text-gray-700 font-exo">
                       {project.locationDetails}
@@ -412,16 +417,15 @@ const ShreekhetraVihar1New = () => {
                   </div>
                   <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3084.862626115081!2d85.822453!3d20.021361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDAxJzE2LjkiTiA4NcKwNDknMjAuOCJF!5e1!3m2!1sen!2sin!4v1759844238473!5m2!1sen!2sin"
-                      width="100%"
+                      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3080.7821079940777!2d85.953563!3d20.228320999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDEzJzQyLjAiTiA4NcKwNTcnMTIuOCJF!5e1!3m2!1sen!2sin!4v1759850441658!5m2!1sen!2sin"
+                      width="600"
                       height="450"
                       style={{ border: 0 }}
+                      className="w-full h-full rounded-lg"
                       allowFullScreen=""
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      className="w-full h-full rounded-lg"
-                      title="Shreekhetra Vihar 1 Location Map"
-                    />
+                    ></iframe>
                   </div>
                 </div>
               </motion.div>
@@ -429,7 +433,7 @@ const ShreekhetraVihar1New = () => {
 
             {/* Sidebar */}
             <div className="lg:col-span-4">
-              {/* Contact Info */}
+              {/* Contact */}
               <motion.div
                 className="bg-white rounded-xl shadow-xl overflow-hidden mb-8"
                 initial={{ opacity: 0, x: 20 }}
@@ -478,15 +482,15 @@ const ShreekhetraVihar1New = () => {
                   <div className="mt-6">
                     <Link
                       to="/contact"
-                      className=" w-full flex justify-center items-center gap-2 bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-4 rounded-lg text-center transition duration-300 font-exo"
+                      className="block w-full bg-red-700 hover:bg-red-800 text-white font-semibold py-3 px-4 rounded-lg text-center transition duration-300 font-exo"
                     >
-                      Enquire Now <BiSupport className="text-white text-lg" />
+                      Enquire Now
                     </Link>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Availability Card */}
+              {/* Availability */}
               <motion.div
                 className="bg-white rounded-xl shadow-xl overflow-hidden"
                 initial={{ opacity: 0, x: 20 }}
@@ -505,7 +509,6 @@ const ShreekhetraVihar1New = () => {
                       {project.totalUnits}
                     </span>
                   </div>
-
                   <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
                     <span className="text-gray-700 font-exo">
                       Project Status
@@ -529,7 +532,7 @@ const ShreekhetraVihar1New = () => {
         </div>
       </main>
 
-      {/* Similar Projects */}
+      {/* Similar */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-800 mb-10 font-exo text-center">
@@ -565,7 +568,7 @@ const ShreekhetraVihar1New = () => {
                     <MapPin className="w-4 h-4 mr-1 text-red-700" />
                     <span className="text-sm font-exo">{item.location}</span>
                   </div>
-                  
+
                   <Link
                     to={`/projects/${item.id}`}
                     className="block w-full bg-red-700 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg text-center transition duration-300 font-exo"
@@ -582,4 +585,4 @@ const ShreekhetraVihar1New = () => {
   );
 };
 
-export default ShreekhetraVihar1New;
+export default SaiVihar;
