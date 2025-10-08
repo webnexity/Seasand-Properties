@@ -287,7 +287,7 @@ const About = () => {
                 className="bg-white rounded-xl shadow-lg p-6 text-center"
               >
                 <div className="text-4xl font-bold text-red-700 mb-2 font-exo">
-                  20+
+                  10+
                 </div>
                 <div className="text-gray-600 font-medium font-exo">
                   Years of Excellence
@@ -301,7 +301,7 @@ const About = () => {
                   500+
                 </div>
                 <div className="text-gray-600 font-medium font-exo">
-                  Projects Completed
+                  Plots Delivered
                 </div>
               </motion.div>
               <motion.div
@@ -309,10 +309,10 @@ const About = () => {
                 className="bg-white rounded-xl shadow-lg p-6 text-center"
               >
                 <div className="text-4xl font-bold text-red-700 mb-2 font-exo">
-                  50+
+                  1000+
                 </div>
                 <div className="text-gray-600 font-medium font-exo">
-                  Cities Served
+                  Happy Clients
                 </div>
               </motion.div>
               <motion.div

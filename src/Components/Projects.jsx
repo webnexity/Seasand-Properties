@@ -249,20 +249,20 @@ const ProjectsShowcase = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <h3 className="text-3xl font-bold text-red-700 mb-2">25+</h3>
-              <p className="text-gray-600">Projects Completed</p>
+              <h3 className="text-3xl font-bold text-red-700 mb-2">500+</h3>
+              <p className="text-gray-600">Plots Delivered</p>
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-red-700 mb-2">500+</h3>
-              <p className="text-gray-600">Happy Families</p>
+              <h3 className="text-3xl font-bold text-red-700 mb-2">1000+</h3>
+              <p className="text-gray-600">Happy Clients</p>
             </div>
             <div>
               <h3 className="text-3xl font-bold text-red-700 mb-2">10+</h3>
-              <p className="text-gray-600">Years Experience</p>
+              <p className="text-gray-600">Years of Excellence</p>
             </div>
             <div>
               <h3 className="text-3xl font-bold text-red-700 mb-2">4.9★</h3>
-              <p className="text-gray-600">Average Rating</p>
+              <p className="text-gray-600">Customer Satisfaction</p>
             </div>
           </div>
         </motion.div>

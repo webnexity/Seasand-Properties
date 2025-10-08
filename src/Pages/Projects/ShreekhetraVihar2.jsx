@@ -15,11 +15,29 @@ import {
 
 const ShreekhetraVihar2 = () => {
   const [activeImage, setActiveImage] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState("");
 
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setIsModalOpen(false);
+    };
+    if (isModalOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isModalOpen]);
+
+  const openImageModal = (src) => {
+    setModalImageSrc(src);
+    setIsModalOpen(true);
+  };
 
   // Project Data
   const project = {
@@ -47,7 +65,7 @@ const ShreekhetraVihar2 = () => {
     price: "Very Competative price",
     availability: "Sold Out",
     totalUnits: "65 Plots",
-    
+
     possessionDate: "December 2025",
     plotSizes: ["1500 sq.ft", "1800 sq.ft", "2200 sq.ft", "3000 sq.ft"],
     amenities: [
@@ -174,7 +192,10 @@ const ShreekhetraVihar2 = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="rounded-xl overflow-hidden shadow-2xl mb-4 h-[400px]">
+                <div
+                  className="rounded-xl overflow-hidden shadow-2xl mb-4 h-[400px] cursor-zoom-in"
+                  onClick={() => openImageModal(project.images[activeImage])}
+                >
                   <img
                     src={project.images[activeImage]}
                     alt={`${project.name} - View ${activeImage + 1}`}
@@ -191,6 +212,7 @@ const ShreekhetraVihar2 = () => {
                           : "border-transparent"
                       }`}
                       onClick={() => setActiveImage(index)}
+                      onDoubleClick={() => openImageModal(img)}
                     >
                       <img
                         src={img}
@@ -409,7 +431,7 @@ const ShreekhetraVihar2 = () => {
                       {project.totalUnits}
                     </span>
                   </div>
-                  
+
                   <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
                     <span className="text-gray-700 font-exo">
                       Project Status
@@ -432,6 +454,32 @@ const ShreekhetraVihar2 = () => {
           </div>
         </div>
       </main>
+
+      {/* Image Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className="relative max-w-[95vw] max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              aria-label="Close image"
+              className="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-600 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center"
+              onClick={() => setIsModalOpen(false)}
+            >
+              ✕
+            </button>
+            <img
+              src={modalImageSrc}
+              alt="Project enlarged"
+              className="block w-auto h-auto max-w-[95vw] max-h-[85vh] object-contain rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Similar Projects */}
       <section className="bg-gray-50 py-16">
@@ -469,7 +517,7 @@ const ShreekhetraVihar2 = () => {
                     <MapPin className="w-4 h-4 mr-1 text-red-700" />
                     <span className="text-sm font-exo">{item.location}</span>
                   </div>
-                 
+
                   <Link
                     to={`/projects/${item.id}`}
                     className="block w-full bg-red-700 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-center transition duration-300 font-exo"

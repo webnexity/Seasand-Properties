@@ -75,7 +75,7 @@ const Hero = () => {
                 <span className="w-2 h-2 bg-black rounded-full animate-pulse"></span>
                 Get
                 <span className="ml-2 text-gray-700">
-                  One day registration{" "}
+                  Same day registration{" "}
                 </span>
               </Link>
             </motion.div>
@@ -96,9 +96,8 @@ const Hero = () => {
               variants={itemVariants}
               className="text-xl lg:text-xl text-gray-600 mb-12 leading-relaxed font-exo"
             >
-              Find office space to match your ambition. Nomad Group's
-              tech-driven tools and human touch make office leasing smooth and
-              enjoyable.
+              We deliver the best properties for you. Buy, sell, rent, or invest
+              in real estate with confidence.
             </motion.p>
 
             {/* CTA Button */}
@@ -146,12 +145,6 @@ const Hero = () => {
               variants={floatingVariants}
               animate="animate"
               className="absolute -top-4 -right-4 w-32 h-32 bg-green-400 rounded-full opacity-80 blur-xl"
-            ></motion.div>
-            <motion.div
-              variants={floatingVariants}
-              animate="animate"
-              style={{ animationDelay: "1s" }}
-              className="absolute -bottom-8 -left-8 w-24 h-24 bg-yellow-400 rounded-full opacity-60 blur-lg"
             ></motion.div>
 
             {/* Main Image Container */}
@@ -203,19 +196,6 @@ const Hero = () => {
                   </div>
                 </div>
               </motion.div>
-
-              {/* Play Button Overlay */}
-              {/* <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.5, duration: 0.5 }}
-                whileHover={{ scale: 1.1 }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
-              >
-                <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 hover:bg-white/30 transition-all duration-300">
-                  <Play className="w-12 h-12 text-white fill-current" />
-                </div>
-              </motion.div> */}
             </div>
 
             {/* Secondary Images */}
@@ -230,18 +210,18 @@ const Hero = () => {
                 className="rounded-2xl overflow-hidden shadow-lg cursor-pointer"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=400&q=80"
-                  alt="Office meeting room"
+                  src="hero-img-2.jpg"
+                  alt="hero-img-2"
                   className="w-full h-32 object-cover"
                 />
               </motion.div>
-              <motion.div
+              <motion.div 
                 whileHover={{ scale: 1.02 }}
                 className="rounded-2xl overflow-hidden shadow-lg cursor-pointer"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=400&q=80"
-                  alt="Modern office lobby"
+                  src="hero-img-3.jpg"
+                  alt="hero-img-3"
                   className="w-full h-32 object-cover"
                 />
               </motion.div>

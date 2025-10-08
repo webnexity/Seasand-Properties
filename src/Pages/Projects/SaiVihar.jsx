@@ -15,6 +15,8 @@ import {
 
 const SaiVihar = () => {
   const [activeImage, setActiveImage] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState("");
 
   // Refs for scroll animations
   const galleryRef = useRef(null);
@@ -66,6 +68,22 @@ const SaiVihar = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setIsModalOpen(false);
+    };
+    if (isModalOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isModalOpen]);
+
+  const openImageModal = (src) => {
+    setModalImageSrc(src);
+    setIsModalOpen(true);
+  };
 
   // Animation variants
   const galleryVariants = {
@@ -270,7 +288,10 @@ const SaiVihar = () => {
                 variants={galleryVariants}
                 className="mb-12"
               >
-                <div className="rounded-xl overflow-hidden shadow-2xl mb-4 h-[400px]">
+                <div
+                  className="rounded-xl overflow-hidden shadow-2xl mb-4 h-[400px] cursor-zoom-in"
+                  onClick={() => openImageModal(project.images[activeImage])}
+                >
                   <img
                     src={project.images[activeImage]}
                     alt={`${project.name} - View ${activeImage + 1}`}
@@ -287,6 +308,7 @@ const SaiVihar = () => {
                           : "border-transparent"
                       }`}
                       onClick={() => setActiveImage(index)}
+                      onDoubleClick={() => openImageModal(img)}
                     >
                       <img
                         src={img}
@@ -531,6 +553,32 @@ const SaiVihar = () => {
           </div>
         </div>
       </main>
+
+      {/* Image Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className="relative max-w-[95vw] max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              aria-label="Close image"
+              className="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-600 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center"
+              onClick={() => setIsModalOpen(false)}
+            >
+              ✕
+            </button>
+            <img
+              src={modalImageSrc}
+              alt="Project enlarged"
+              className="block w-auto h-auto max-w-[95vw] max-h-[85vh] object-contain rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Similar */}
       <section className="bg-gray-50 py-16">
