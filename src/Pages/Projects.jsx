@@ -31,8 +31,8 @@ const upcomingProjects = [
   {
     name: "Shreekhetra Vihar - 1",
     slug: "shreekhetra-vihar-1",
-    image: "/Shreeketravihar-1-6.jpeg",
-    location: "Bhubaneswar-Puri NH",
+    image: "/Shreeketravihar-1-3.jpeg",
+    location: "Pipili, Puri",
     description:
       "Experience luxury living Society. Premium plots for your dream home.",
     keyDistances: ["5kms from Konark Temple", "10kms from Puri Beach"],
@@ -46,8 +46,8 @@ const upcomingProjects = [
   {
     name: "Shreekhetra Vihar - 2",
     slug: "shreekhetra-vihar-2",
-    image: "/Shreeketravihar-2-9.jpeg",
-    location: "Near Puri",
+    image: "/Shreekhetra-vihar-2-11.jpeg",
+    location: "Pipili, Puri",
     description:
       "A serene and peaceful environment, perfect for building a family home away from the city hustle.",
     keyDistances: [
@@ -64,8 +64,8 @@ const upcomingProjects = [
   {
     name: "Shreekhetra Vihar - 3",
     slug: "shreekhetra-vihar-3",
-    image: "/Shreekhetravihar-3-6.jpeg",
-    location: "Sakhigopal, Puri",
+    image: "/Shreekhetravihar-3-3.jpeg",
+    location: "Pipili, Puri",
     description:
       "Invest in the future with these strategically located plots with high appreciation potential.",
     keyDistances: ["2kms from Sakhigopal Temple", "On NH-316 (New)"],
@@ -80,7 +80,7 @@ const upcomingProjects = [
     name: "Shreekhetra Vihar 4",
     slug: "shreekhetra-vihar-4",
     image: "/Shreekhetravihar-4-6.jpeg",
-    location: "Bhubaneswar",
+    location: "Pipili, Puri",
     description:
       "A golden opportunity to make your dream come true at an affordable budget with maximum facility.",
     keyDistances: [
@@ -99,15 +99,15 @@ const upcomingProjects = [
 
 const completedProjects = [
   {
-    name: "Green Valley Plots",
+    name: "Near Puri Sea Beach",
     slug: "green-valley",
     image:
-      "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    location: "Cuttack",
+      "/hero3.jpg",
+    location: "Near Puri Sea beach",
     description:
       "Successfully delivered premium residential plots with excellent infrastructure and amenities.",
     keyDistances: [
-      "10kms from Cuttack city center",
+      "10kms from Puri Sea beach",
       "5kms from major highways",
     ],
     amenities: [
@@ -119,11 +119,11 @@ const completedProjects = [
     completionYear: "2023",
   },
   {
-    name: "Coastal Heights",
+    name: "Malatipur, Puri",
     slug: "coastal-heights",
     image:
-      "https://images.pexels.com/photos/7031406/pexels-photo-7031406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    location: "Puri",
+      "/hero4.jpg",
+    location: "Malatipur, Puri",
     description:
       "A beachside residential plot development with modern infrastructure and serene surroundings.",
     keyDistances: ["3kms from Puri beach", "Near to tourist attractions"],
@@ -296,10 +296,10 @@ const Projects = () => {
             <div>
               <div className="flex justify-between items-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-800 font-exo relative">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-800">
-                    Upcomming Projects
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-800">
+                    Upcoming Projects
                   </span>
-                  <div className="absolute -bottom-2 left-0 w-20 h-1 bg-green-600"></div>
+                  <div className="absolute -bottom-2 left-0 w-20 h-1 bg-red-600"></div>
                 </h2>
               </div>
               <motion.div
@@ -321,53 +321,28 @@ const Projects = () => {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-80"></div>
-                      <div className="absolute top-4 left-4 z-10">
-                        <span className="bg-green-600 text-white text-sm px-4 py-1.5 rounded-full font-semibold flex items-center">
-                          <Award className="w-3.5 h-3.5 mr-1.5" />
-                          Completed
-                        </span>
-                      </div>
-                      <div className="absolute top-4 right-4 z-10">
-                        <span className="bg-gray-800 text-white text-sm px-4 py-1.5 rounded-full font-semibold flex items-center">
-                          <Calendar className="w-3.5 h-3.5 mr-1.5" />
-                          {project.completionYear}
-                        </span>
-                      </div>
                       <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
                         <div className="flex items-center mb-2">
-                          <MapPin className="w-5 h-5 mr-2 text-green-400" />
+                          <MapPin className="w-5 h-5 mr-2 text-red-400" />
                           <span className="text-white font-exo text-sm">
                             {project.location}
                           </span>
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-2 font-exo group-hover:text-green-200 transition-colors duration-300">
+                        <h3 className="text-2xl font-bold text-white mb-2 font-exo group-hover:text-red-200 transition-colors duration-300">
                           {project.name}
                         </h3>
-                        <div className="flex flex-wrap gap-2 mt-3">
-                          {project.amenities.slice(0, 3).map((amenity, idx) => (
-                            <span
-                              key={idx}
-                              className="bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-md font-exo"
-                            >
-                              {amenity}
-                            </span>
-                          ))}
-                        </div>
                       </div>
                     </div>
-                    <div className="p-6">
-                      <p className="text-gray-700 mb-6 font-exo line-clamp-3">
-                        {project.description}
+                    <div className="p-6 text-center">
+                      <p className="text-gray-600 mb-6 font-exo italic text-lg">
+                        Stay connected with us to know more...
                       </p>
-
-                      <div className="flex justify-between items-center">
-                        <div className="text-green-700 font-semibold text-sm bg-green-50 px-3 py-1 rounded-lg flex items-center">
-                          <CheckSquare className="w-3.5 h-3.5 mr-1.5" />
-                          <span className="font-exo">
-                            Successfully Delivered
-                          </span>
-                        </div>
-                      </div>
+                      <Link
+                        to="/contact"
+                        className="inline-block bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 font-exo"
+                      >
+                        Contact Us
+                      </Link>
                     </div>
                   </motion.div>
                 ))}
@@ -414,10 +389,10 @@ const Projects = () => {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
                 <a
-                  href="tel:+919861892233"
+                  href="tel:0674-3588362"
                   className="bg-transparent border-2 border-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-colors duration-300 font-exo"
                 >
-                  Call Now: +91 98618 92233
+                  Call Now: 0674-3588362
                 </a>
               </div>
             </div>

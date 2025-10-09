@@ -18,33 +18,29 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Rajesh Sharma",
-      position: "Business Owner",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      name: "Dinesh Dash",
+      
       stars: 5,
       text: "Seasand Properties exceeded all my expectations. Their commitment to quality and attention to detail is unmatched. My family and I couldn't be happier with our new beachfront home.",
     },
     {
       id: 2,
-      name: "Priya Patel",
-      position: "IT Professional",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      name: "Bhansidhar Panigrahi",
+      
       stars: 5,
       text: "I was skeptical about investing in property, but Seasand Properties made the entire process seamless. The location and amenities are exactly what I was looking for, and the value appreciation has been impressive.",
     },
     {
       id: 3,
-      name: "Arjun Mehta",
-      position: "Doctor",
-      image: "https://randomuser.me/api/portraits/men/62.jpg",
+      name: "Sumitra Sahoo",
+      
       stars: 5,
       text: "The team at Seasand Properties understood my requirements perfectly. They helped me find the perfect plot in a prime location. Their after-sales service is truly commendable.",
     },
     {
       id: 4,
-      name: "Aisha Khan",
-      position: "Finance Consultant",
-      image: "https://randomuser.me/api/portraits/women/63.jpg",
+      name: "Akhaya Mohapatra",
+     
       stars: 5,
       text: "As an investor, I look for properties with high potential returns. Seasand Properties delivered exactly that. Their market insights and property selection are top-notch.",
     },
@@ -116,7 +112,7 @@ const Testimonials = () => {
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600 text-lg font-exo">
             Discover why our clients choose Seasand Properties for their dream
-            homes and investment properties.
+             properties in best location.
           </p>
         </motion.div>
 
@@ -140,21 +136,12 @@ const Testimonials = () => {
               </div>
 
               <div className="flex items-center mb-6 relative z-10">
-                <div className="mr-4">
-                  <motion.img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-blue-100"
-                    whileHover={{ scale: 1.1 }}
-                  />
-                </div>
+                
                 <div>
                   <h4 className="text-xl font-semibold text-gray-900 font-exo">
                     {testimonial.name}
                   </h4>
-                  <p className="text-gray-600 font-exo">
-                    {testimonial.position}
-                  </p>
+                 
                   <div className="flex mt-1">
                     {renderStars(testimonial.stars)}
                   </div>
@@ -166,6 +153,23 @@ const Testimonials = () => {
               </blockquote>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* And Many More Text */}
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0 }}
+          animate={controls}
+          variants={{
+            visible: {
+              opacity: 1,
+              transition: { delay: 0.4, duration: 0.6 },
+            },
+          }}
+        >
+          <p className="text-red-600 text-lg font-exo italic">
+            and many more...
+          </p>
         </motion.div>
 
         {/* CTA Section */}

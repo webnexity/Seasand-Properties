@@ -219,26 +219,25 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {[
-                "Home",
-                "About Us",
-                "Projects",
-                "Properties",
-                "Services",
-                "Contact Us",
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/about" },
+                { name: "Projects", path: "/projects" },
+                { name: "Contact Us", path: "/contact" },
               ].map((item) => (
                 <motion.li
-                  key={item}
+                  key={item.name}
                   whileHover="hover"
                   variants={linkItemVariants}
                 >
-                  <motion.a
-                    href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="flex items-center text-gray-400 hover:text-red-800 transition-colors duration-300 font-exo"
-                    variants={linkHover}
-                  >
-                    <ChevronRight className="w-4 h-4 mr-2" />
-                    {item}
-                  </motion.a>
+                  <Link to={item.path}>
+                    <motion.div
+                      className="flex items-center text-gray-400 hover:text-red-800 transition-colors duration-300 font-exo"
+                      variants={linkHover}
+                    >
+                      <ChevronRight className="w-4 h-4 mr-2" />
+                      {item.name}
+                    </motion.div>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
@@ -258,7 +257,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <motion.li variants={contactItemVariants}>
                 <motion.a
-                  href="https://goo.gl/maps/your-address"
+                  href="https://maps.app.goo.gl/vSKbDKTwkuPE6gNY6?g_st=aw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start text-gray-400 hover:text-red-800 transition-colors duration-300"
@@ -276,7 +275,7 @@ const Footer = () => {
               </motion.li>
               <motion.li variants={contactItemVariants}>
                 <motion.a
-                  href="tel:+919876543210"
+                  href="tel:0674-3588362"
                   className="flex items-center text-gray-400 hover:text-red-800 transition-colors duration-300 font-exo"
                   whileHover={{ color: "#991b1b" }}
                 >
@@ -299,7 +298,7 @@ const Footer = () => {
                 className="flex items-center text-gray-400 font-exo"
               >
                 <Clock className="w-5 h-5 mr-3 flex-shrink-0" />
-                Mon-Sat: 9:00 AM - 6:00 PM
+                Mon-Sat: 11:00 AM - 6:00 PM
               </motion.li>
             </ul>
           </motion.div>

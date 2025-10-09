@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { IoArrowForwardOutline } from "react-icons/io5";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -12,6 +12,17 @@ import {
 } from "lucide-react";
 
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = ["/hero3.jpg", "/hero4.jpg"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -149,53 +160,25 @@ const Hero = () => {
 
             {/* Main Image Container */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <motion.img
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                src="/hero_image.jpg"
-                alt="Modern office space with people working"
-                className="w-full h-[600px] object-cover"
-              />
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentImageIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  src={images[currentImageIndex]}
+                  alt="Property showcase"
+                  className="w-full h-[600px] object-cover"
+                />
+              </AnimatePresence>
 
               {/* Overlay Content */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
 
               {/* Floating Cards */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1, duration: 0.6 }}
-                className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg"
-              >
-                <div className="flex items-center gap-3">
-                  <Building2 className="w-8 h-8 text-red-700" />
-                  <div>
-                    <div className="font-bold text-gray-900">
-                      Premium Locations
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      Downtown & Business Districts
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+           
 
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1.2, duration: 0.6 }}
-                className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg"
-              >
-                <div className="flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-600" />
-                  <div>
-                    <div className="font-bold text-gray-900">
-                      Growth Focused
-                    </div>
-                    <div className="text-sm text-gray-600">Best Properties</div>
-                  </div>
-                </div>
-              </motion.div>
             </div>
 
             {/* Secondary Images */}
@@ -210,7 +193,7 @@ const Hero = () => {
                 className="rounded-2xl overflow-hidden shadow-lg cursor-pointer"
               >
                 <img
-                  src="hero-img-2.jpg"
+                  src="hero5.jpg"
                   alt="hero-img-2"
                   className="w-full h-32 object-cover"
                 />
